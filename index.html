@@ -1,53 +1,62 @@
-<html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"cred":"cookie","capabilities":{"artifact":"artifact.O-h4mzdy.js","assets":"assets.DOAjpBS9.js","comments":"comments.DrhK3r8W.js","db":"db.DV02l9iB.js","downloads":"downloads.axDW2QAi.js","embed":"embed.DcZf-TSv.js","endpoints":"endpoints.BPfoKaE1.js","mcp":"mcp.C8qKIFvQ.js","network":"network.B5UA9Su4.js","permissions":"permissions.DWFFeHI0.js","room":"room.BF1j0KPr.js","sample":"sample.C7KQQdQj.js","self":"artifact.O-h4mzdy.js","user":"user.CCh6oTS_.js"},"transforms":"_transforms.DeQ5QuJ7.js","comments":"_comments.DUaNQZcg.js","translate":"_translate.DqxC5ek1.js","ldx":"_ldx.CqNtBrkk.js"}                                                                           </script><script>(function(){"use strict";var In=3e5;function rr(t,e){try{const n=t("navigation")[0],o=[n.responseStart,n.redirectEnd-n.redirectStart,n.domContentLoadedEventStart,e()];for(let a=0;a<o.length;a++){if(!(o[a]>=0&&o[a]<=3e5))return;o[a]=o[a]|0}return o}catch{return}}var nr=["light","dark","system"],or=/^[A-Za-z0-9_-]{1,64}$/,wt=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,ar=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function sr(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||ar.has(e)}var bt="data-ldx-props";function ir(t,e){if(e.toLowerCase()===bt)return!0;const n=t.getAttribute(bt);if(n===null)return!1;try{const o=JSON.parse(n);if(o===null||typeof o!="object"||Array.isArray(o))return!0;const a=e.toLowerCase();return Object.keys(o).some(s=>s.toLowerCase()===a)}catch{return!0}}var Fn="http://www.w3.org/1999/xhtml",lr="http://www.w3.org/2000/svg",cr=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),ur=new Set(["script","style"]);function fr(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!cr.has(e):t.namespaceURI===lr?!ur.has(e):!1}function We(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function dr(t,e){const n=t.length,o=e.length;let a=0;for(;a<n&&a<o&&We(t.charCodeAt(a),e.charCodeAt(a));)a++;let s=0;for(;s<n-a&&s<o-a&&We(t.charCodeAt(n-1-s),e.charCodeAt(o-1-s));)s++;return{p:a,s}}function hr(t,e){const n=t.firstChild;if(t.childNodes.length!==1||n===null||n.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const o=n.data,a=o.length,s=e.length,{p:c,s:d}=dr(o,e);c===a&&d===0&&a===s||n.replaceData(c,a-c-d,e.slice(c,s-d));const L=n.data,g=t.ownerDocument.getSelection?.()??null,b=g!==null&&g.rangeCount>0&&(g.anchorNode===n||g.focusNode===n)?{anchor:g.anchorNode,anchorOffset:g.anchorOffset,focus:g.focusNode,focusOffset:g.focusOffset}:null;let m=-1,O=-1;for(let h=0;h<L.length&&h<e.length;h++){const k=L.charCodeAt(h),B=e.charCodeAt(h);k!==B&&We(k,B)&&(m<0&&(m=h),O=h)}const v=m>=0;if(v&&n.replaceData(m,O-m+1,e.slice(m,O+1)),v&&b!==null&&b.anchor!==null&&b.focus!==null)try{g.setBaseAndExtent(b.anchor,b.anchorOffset,b.focus,b.focusOffset)}catch{}}var pr=new Set(["html","head","body","frameset"]);function mr(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&pr.has(t.localName)}function vr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!or.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[n,o]of Object.entries(e.attrsSet))if(!wt.test(n)||typeof o!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const n of e.attrsRemoved)if(typeof n!="string"||!wt.test(n))return!1}return!0}function _r(t,e){if(t===null||typeof t!="object")return!1;const{seq:n,elements:o}=t;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!e(o[a]))return!1;return!0}function yr(t){return t===null||typeof t!="object"?!1:_r(t.__frame_patch,vr)}function gr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function wr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function br(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function Er(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const n=e.theme;return typeof n=="string"&&nr.includes(n)}var Sr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],Ar=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function Rr(t){return typeof t=="string"&&Ar.includes(t)?t:"other"}var kr=Object.freeze({until:null,now:!1}),Tr="__claude_hot",Lr="__claude_hot_in",Or=/^__claude_hot(?:_in)?(?::|$)/,Et=/^[0-9a-z]{1,32}$/,Ve=t=>t===void 0?Tr:"__claude_hot:"+t,ye=t=>t===void 0?Lr:"__claude_hot_in:"+t;function Mr(t,e){const n=[];for(let o=0;o<t.length;o++){const a=t.key(o);a!==null&&a!==e&&Or.test(a)&&n.push(a)}for(const o of n)t.removeItem(o)}function Pr(t){let e=null;try{e=U(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!Et.test(e.k)?null:ae(e.g)?{k:e.k,g:e.g}:{k:e.k}}var Dn=262144,Nr=3e3,Cr=5e3,St=/^[a-z0-9._:-]{1,64}$/,jr=["none","hot-restart","hard-reload"],Ir=["asset","doc","added","removed"],Fr=1500,Dr=/^[0-9a-f]{64}$/;function U(t){return t!==null&&typeof t=="object"?t:null}function ae(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function At(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function xr(t){return t===void 0||typeof t=="string"&&St.test(t)}function Rt(t){const e=U(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function Xe(t){const e=U(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&At(e.seq)&&typeof e.handoff=="string"&&Sr.includes(e.handoff)&&xr(e.note)}function Hr(t){const e=U(t);return e!==null&&ae(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||Xe(e.from))}function Br(t){const e=U(t);return e!==null&&e.kv===1&&ae(e.gen)&&Xe(e.from)&&Object.hasOwn(e,"data")}function qr(t){const e=U(t);return e!==null&&e.__frame_hot_snapshot===!0&&ae(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||Rt(e.deadline))&&At(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function Ur(t){const e=U(t);return e!==null&&e.__frame_hot_start===!0&&ae(e.gen)&&Xe(e.from)}function Gr(t){return typeof t=="string"&&t.length>=1&&t.length<=128}function kt(t){return U(t)!==null&&!Array.isArray(t)}function zr(t){const e=U(t);return e!==null&&e.__frame_cap_grant===!0&&typeof e.cap=="string"&&Gr(e.ver)&&(e.grant===void 0||kt(e.grant))&&(e.budgets===void 0||kt(e.budgets)&&Object.values(e.budgets).every(Number.isFinite))&&(e.brokerGen===void 0||ae(e.brokerGen))}function Kr(t){const e=U(t);return e!==null&&e.__frame_cap_rewired===!0&&(e.caps===void 0||Array.isArray(e.caps)&&e.caps.every(n=>typeof n=="string"))&&(e.brokerGen===void 0||ae(e.brokerGen))}function Tt(t){const e=U(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function Lt(t){if(t==null||typeof t=="string")return!0;const e=U(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function $r(t){const e=U(t);return e!==null&&typeof e.path=="string"&&Ir.includes(e.kind)&&Lt(e.from)&&Lt(e.to)}function Wr(t){return t===null?null:Object.freeze(t.filter($r))}function Vr(t){const e=U(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&Tt(e.from)&&Tt(e.to)&&(e.changed===null||Array.isArray(e.changed))&&jr.includes(e.required)&&Rt(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Dr.test(e.preflight))}var se=/^[\w.-]+\.js$/;function Xr(t,e,n){return n?"inert":typeof e=="string"&&se.test(e)?t?[e]:"inert":t?"inert":"framed"}var Ot=Object.freeze({[Symbol("claude.hot.restart")]:!0});function Mt(t,e){let n;try{n=t??sessionStorage}catch{return null}const o=Ve(e?.k),a=ye(e?.k);let s=null;try{s=n.getItem(o)}catch{}try{n.removeItem(o)}catch{}try{Mr(n,a)}catch{}let c=null;if(s!==null&&!(e!==null&&e.g===void 0))try{const d=JSON.parse(s);Br(d)&&(e===null||d.gen===e.g)&&(c=d)}catch{}if(c===null)try{n.removeItem(a)}catch{}return c}function Pt(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var Yr=/^[^/\\?#]{1,128}$/,Nt=t=>Yr.test(t)&&t!=="."&&t!=="..";function Ct(t,e,n){const o=new URL(t),a="/_f/"+e+"/";if(!e||!o.pathname.startsWith(a)||!Nt(n))return null;const s=o.search.slice(1).split("&").filter(c=>!/^__frame_t(?:=|$)/.test(c)).join("&");return o.origin+"/_f/"+n+"/"+o.pathname.slice(a.length)+(s?"?"+s:"")+o.hash}var Ce="{}";function ge(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function jt(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function It(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function Jr(t,e,n,o=null){const a=setTimeout,s=clearTimeout,c=queueMicrotask,d=performance.now.bind(performance),L=new TextEncoder;let g=null,b=null;try{g=history,b=g.replaceState.bind(g)}catch{}const m=(...r)=>{try{console.warn(...r)}catch{}};let O=Pt(),v=null;try{v=sessionStorage}catch{}const h={storage:v,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:O,key:o?.k};let k=o?.k;const B=typeof requestAnimationFrame=="function"?requestAnimationFrame:r=>a(()=>r(d()),16);let _=e?.data??{},C=ge(e?.from),T=e?.gen??0,F=e!==null,W=!1,Q=!1,V=null,Se=!1;const Ae=new AbortController;let Re=null,q=null,ke=null,Te=!1,l=()=>{};const p=new Promise(r=>{l=r});let w=!1,D=!1,j=!1,x,P=null,ce=!1,xe=!1,re=!1,Le=!1,ne=!1,de=!1;const oe=r=>{for(const u of[Ve(r),ye(r)])try{v?.removeItem(u)}catch{}},H=(r,u)=>{try{u!==null&&n.post(r,u)}catch{}},he=()=>ne||=re&&(q===null||Le),X=()=>{const r={__frame_hot:!0,ready:q!==null,accept:ke!==null,demand:!0};de=!ne,de&&(r.booting=!0),w&&(r.readData=!0),j&&(r.threw=!0),P?.assess&&(r.preflight=!0),H(r,V)};let Oe=!1,Me=!1,i=!1,E=!1;const y=()=>{Oe||!Se||i||(Oe=!0,H({__frame_reveal_hold:!0},"*"))},N=()=>new Promise(r=>{let u,f=0;const S=I=>{if(u===void 0)u=I;else if(I!==u||++f>=8){r();return}try{B(S)}catch{r()}};try{B(S)}catch{r()}}),Y=()=>{i=!0,H({__frame_reveal_ready:!0},"*")},$=r=>{Me||(Me=!0,r.then(u=>{if(u===!1)return;let f=null;try{f=P?.settle?.()??null}catch{}return(f===null?N():new Promise(S=>{a(S,50),Promise.resolve(f).then(S,S)}).then(N)).then(Y)}))},Pe=()=>{if(E||!i)return;E=!0;const r=()=>{try{P?.afterReveal?.()}catch{}};r(),N().then(()=>{r(),Y()})},He=(r=!1)=>{if(Te||q===null||!F||!Q)return;Te=!0;const u=q,f=_;c(()=>{let S;try{S=u(f)}catch(G){throw l(!1),G}let I=!1;try{I=typeof S?.then=="function"}catch{}if(!I){l(!0);return}Promise.resolve(S).then(()=>l(!0),G=>{l(!1),c(()=>{throw G})})}),$(r?p:n.dcl.then(()=>p))},Be=r=>typeof r=="string"&&St.test(r)?r:void 0,ct=r=>{const u={__frame_hot_restart:!0},f=Be(r?.note);f!==void 0&&(u.note=f),r?.required==="hard-reload"&&(u.required="hard-reload"),H(u,V)},Vt=Object.freeze({get data(){return Q||(D=!0),!F&&!w&&(w=!0,Q&&X()),_},get from(){return C},get gen(){return T},signal:Ae.signal,snapshot(r){typeof r=="function"&&(Re=r)},ready(r){typeof r!="function"||q!==null||(q=r,y(),X(),W&&H({__frame_hot_ready:!0,gen:T},V),He())},accept(r){typeof r=="function"&&(ke=r,X())},restart(r){const u={note:r?.note,required:r?.required};if(Q){ct(u);return}const f=x;x={note:Be(f?.note)??u.note,required:f?.required==="hard-reload"||u.required==="hard-reload"?"hard-reload":void 0}}});let qe=null,Xt=()=>{};const Tn=new Promise(r=>{Xt=r});let Ln=null;const Yt=()=>Ln??=n.dcl.then(()=>{let r=!1;try{r=qe!==null&&qe.expect()}catch{}if(!r)return;const u=qe.maxMs;return new Promise(f=>{Tn.then(f),a(f,u)})}),Jt=()=>{if(!ce||xe||P===null)return;xe=!0;const r=P;Yt().then(()=>{try{i||r.afterStart(It(e),!1)}catch{}})},Zt=r=>{e!==null&&D&&(w=!0),_={},C=null,T=0;try{v?.removeItem(ye(o?.k))}catch{}e!==null&&!r&&$(n.dcl.then(()=>q!==null?p:void 0))},On=()=>{ce=!0,$(Yt().then(()=>q!==null?p:void 0)),Jt()};try{addEventListener("error",()=>{j||q!==null||(j=!0,X())})}catch{}const Qt=()=>{a(()=>{!ne&&he()&&de&&X()},0)};try{re=document.readyState==="complete",re||addEventListener("load",()=>{re=!0,Qt()},{once:!0})}catch{re=!0}he(),p.then(()=>{Le=!0,Qt()});let ue=-1,ut,ft,Ne=!0,dt=!1,ht,Ue=null;const pt=r=>{const u=Ue===null;Ue=Ne&&r[0]!=="withheld"?r:["withheld",r[1],Ce];let f=r[0];if(Ne&&f!=="withheld"){const I={ver:O,handoff:f};ut!==void 0&&(I.seq=ut),ft!==void 0&&(I.note=ft);try{if(v===null)throw new Error("no storage");v.setItem(Ve(k),'{"kv":1,"gen":'+ue+',"from":'+JSON.stringify(I)+(ht!==void 0?',"k":'+JSON.stringify(ht):"")+',"data":'+(f==="ok"?r[2]:Ce)+"}")}catch{f="unavailable"}}else{f="withheld",oe(k);try{P?.release?.()}catch{}}const S={__frame_hot_snapshotted:!0,gen:ue,handoff:f,bytes:r[1]};r[3]!==void 0&&(S.errName=r[3]),H(S,V),u&&(f==="snapshot_error"||f==="unclonable"||f==="oversize")&&m("claude.hot: snapshot",f,r[3])},pe=r=>{try{return Rr(r?.name)}catch{return"other"}},me=(r,u,f=0)=>pt(u===void 0?[r,f,Ce]:[r,f,Ce,pe(u)]),Mn=r=>{if(r.gen<=ue)return;const u=ue>=0;if(ue=r.gen,ut=r.seq,ft=Be(r.note),typeof r.key=="string"&&Et.test(r.key)&&r.key!==k&&(oe(k),k=r.key),Ne&&=r.handoff!==!1,u){Ue!==null?pt(Ue):dt&&H({__frame_hot_held:!0,gen:ue},V);return}Ae.abort();const f=Object.freeze({handoff:Ne,timeoutMs:r.timeoutMs,deadline:r.deadline??kr}),S=Re,I=()=>{if(Ne)try{ht=P?.capture()}catch{}if(S===null){me("empty");return}let R=!1;const z=a(()=>{R||(R=!0,me("snapshot_timeout"))},Math.max(0,f.timeoutMs));Promise.resolve().then(()=>S(f)).then(ve=>{if(R)return;R=!0,s(z);let ee;try{ee=JSON.stringify(ve)}catch(mt){me("unclonable",mt);return}if(typeof ee!="string"){me("unclonable");return}let te=ee.length;try{te=L.encode(ee).length}catch{}if(te>262144){me("oversize",void 0,te);return}pt(["ok",te,ee])},ve=>{R||(R=!0,s(z),me("snapshot_error",ve))})};let G=null;try{G=P?.holdForIme()??null}catch{}if(G===null)I();else{dt=!0,H({__frame_hot_held:!0,gen:ue},V);const R=()=>{dt=!1,I()};G.then(R,R)}},Pn=r=>{if(!W||F||q===null||r.gen!==T)return;let u=null;try{u=Mt(v,o&&{k:o.k,g:r.gen})}catch{}if(u!==null&&u.gen!==r.gen){u=null;try{v?.removeItem(ye(o?.k))}catch{}}_=u?.data??{},C=jt(ge(u?.from??r.from),ge(r.from)),u!==null&&(T=u.gen),F=!0,W=!1;const f=It(u);p.then(S=>{try{S&&P?.afterStart(f,!0)}catch{}}),He(!0)};let Ge=0;const Nn=r=>{const u=ke;if(u===null||r.id<=Ge)return;Ge=r.id;const f=P?.assess;if(r.preflight===void 0||f===void 0){er(r,u);return}let S=!1;const I=z=>{S||(S=!0,s(R),r.id===Ge&&er(r,u,z))},G=()=>I(f.timeout(r)),R=a(G,Fr+100);f.run(r,window).then(I,G)},er=(r,u,f)=>{let S,I=!1,G=!1,R,z,ve=null;const ee=A=>{if(G)return!1;if(R!==void 0&&R!==A)return m(`claude.hot: u.${A}() ignored - u.${R}() was called first`),!1;const Z=R===void 0;return R=A,Z},te=A=>{R="restart",m(`claude.hot: ${A} - restarting`)},mt=()=>{if(!ee("adopt")||r.id!==Ge)return;const A=r.to.ver;if(ze.required!=="none"){te(`u.adopt() needs required 'none', it is '${ze.required}'`);return}if(!Nt(A)){te("u.adopt() cannot address this version");return}if(!O||A===O)return;const Z=O,J=h.entry;let Ke="",_t,_e=null,$e;try{Ke=location.href,_t=g.state,_e=Ct(Ke,Z,A),_e!==null&&(b(_t,"",_e),location.pathname.startsWith("/_f/"+A+"/")?_e=location.href:$e="navigate event canceled")}catch(gt){$e=pe(gt)}if($e!==void 0){z="adopt_failed",te(`adopt_failed ${$e}; URL not changed`);return}_e===null?(z="adopt_skipped",m(`claude.hot: adopt_skipped - page already left /_f/${Z}/; URL not changed, update still applied`)):z="adopted",O=h.ver=A;try{h.entry=Ct(J,Z,A)??J}catch{}const yt=_e;ve=()=>{if(O===A){if(yt!==null)try{if(location.href!==yt)m("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(b(_t,"",Ke),location.href!==Ke){m("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}z="adopt_reverted",m("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(gt){m(`claude.hot: adopt_revert_failed ${pe(gt)} - URL still at the new version`);return}O=h.ver=Z,h.entry=J,yt===null&&(z=void 0)}}},ze=Object.freeze({from:{ver:r.from.ver,seq:r.from.seq},to:{ver:r.to.ver,seq:r.to.seq},changed:Wr(r.changed),required:r.required,deadline:r.deadline,adopt:mt,defer(){return ee("defer")&&ze.deadline.now&&te("u.defer() past the deadline"),Ot},restart(A){return ee("restart"),R==="restart"&&!G&&(S??=Be(A?.note),I||=A?.required==="hard-reload"),Ot},...f?.update}),Cn=(A,Z)=>{G=!0,A==="threw"?(ve?.(),S??=pe(Z).toLowerCase()):R===void 0&&m(A==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const J={__frame_hot_verdict:!0,id:r.id};J.verdict=A==="threw"||R===void 0||R==="restart"?"restart":R==="adopt"?"applied":"deferred",J.verdict==="restart"&&(I&&(J.required="hard-reload"),S!==void 0&&(J.note=S)),z!==void 0&&(J.verdict==="applied"||z!=="adopted")&&(J.adopt=z),H(Object.assign(J,f?.verdict),V)};let tr=!1;const vt=(A,Z)=>tr?!1:(tr=!0,s(jn),Cn(A,Z),!0),jn=a(()=>vt("timeout"),r.verdictTimeoutMs);Promise.resolve().then(()=>u(ze)).then(()=>vt("settled"),A=>{!vt("threw",A)&&R==="adopt"&&ct({note:pe(A).toLowerCase()}),m("claude.hot: accept",pe(A))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:Vt,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:Vt,boot:h,afterConnect(){Se=!0,(e!==null||q!==null)&&y()},onInit(r,u){V=u,Q=!0;const f=Hr(r)?r:null;f?.phase==="final"&&e!==null&&e.gen===f.gen?(F=!0,C=jt(C,ge(f.from)),On()):(W=f?.phase==="pending",Zt(W),F=!W,T=f?.gen??0,C=ge(f?.from)),X(),de&&a(()=>{ne||(ne=!0,X())},Cr),W&&q!==null&&H({__frame_hot_ready:!0,gen:T},u),x!==void 0&&(ct(x),x=void 0),He()},onNoInit(){Q=!0,Zt(!1),F=!0,He()},onShell(r){return r?.__frame_revealed===!0?(Pe(),!1):qr(r)?(Mn(r),!0):Ur(r)?(Pn(r),!0):Vr(r)?(Nn(r),!0):!1},attachExtras(r){P=r,Jt(),r.assess&&X()},inSlot:()=>ye(k),hydration(r,u){qe??={expect:r,maxMs:u}},hydrated(){Xt()},carried(){return F?_:{}},presented:()=>i}}var xn="frame_ldx_runtime",Zr="frame_ldx_build",Hn="script#an-form",Qr=256;function Ft(t,e,n){for(const o of t)n(o)&&t.delete(o);t.size>=Qr&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function Ye(t,e,n){try{const o=t[e];if(typeof o!="function")return;t[e]=function(...a){const s=o.apply(this,a);try{n(this)}catch{}return s}}catch{}}var Je;function en(){if(Je)return Je;const t={media:new Set,contexts:new Set,onStart:null,onPause:null};Je=t;const e=window.HTMLMediaElement?.prototype;e&&(Ye(e,"play",a=>{Ft(t.media,a,s=>s.paused),t.onStart?.(a)}),Ye(e,"pause",a=>t.onPause?.(a)));const n=window.AudioContext,o=window.AudioNode?.prototype;return n&&o&&Ye(o,"connect",a=>{const s=a.context;s instanceof n&&(Ft(t.contexts,s,c=>c.state==="closed"),t.onStart?.(s))}),t}function tn(t){let e=window;for(let n=0;e.parent&&e.parent!==e&&n<8;n++)if(e=e.parent,t(e))return!0;return!1}function rn(){let t=null;const e=()=>t??parent,n=o=>t?o===t:tn(a=>a===o);return{post(o,a){if(t){e().postMessage(o,a);return}let s=parent;for(let c=0;c<8&&(s.postMessage(o,a),!(!s.parent||s.parent===s));c++)s=s.parent},on(o){const a=s=>{const c=s.source;n(c)&&o(s.data,s.origin,s.isTrusted,()=>{t??=c})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:o=>({post(a,s){if(s?.activation){e().postMessage(a,{targetOrigin:o,includeUserActivation:!0});return}if(s?.transfer){e().postMessage(a,o,s.transfer);return}e().postMessage(a,o)},on(a,s){const c=d=>{n(d.source)&&d.origin===o&&a(d.data,d)};return addEventListener("message",c,s),()=>removeEventListener("message",c,s)}})}}function nn(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var on=500,an=2e4,sn="data-token-reads",ln="data-frame-refused-watch",cn="data-frame-unsupported",un=/(?:^|\s)stylesheet(?:\s|$)/i;function fn(t,e){let n="";if(t instanceof HTMLScriptElement?n=t.src:t instanceof HTMLLinkElement&&un.test(t.rel)&&(n=t.href),!n)return null;try{const o=new URL(n);return o.origin===location.origin&&o.pathname.startsWith(e)?o.origin+o.pathname:null}catch{return null}}function dn(t,e,n){if(!t||e!=="query")return;const o="/_f/"+t+"/";document.documentElement.setAttribute(ln,"");const a=location.href,s=fetch,c=setTimeout,d={method:"HEAD",cache:"no-store",credentials:"same-origin"},L=h=>h.ok||h.status===304;let g=!1,b=!1;const m=()=>removeEventListener("error",v,!0),O=async h=>{const k=await s(h,d);if(L(k))b=!0;else if(k.status===403){const B=await s(a,d);if(L(B)){const _=(await s(h,d)).status;_===403?(b=!0,document.documentElement.setAttribute(cn,""),n()):_<500&&(b=!0)}else B.status>=400&&B.status<500&&(b=!0)}},v=h=>{if(b||g)return;if(document.documentElement.hasAttribute(sn)){b=!0,m();return}const k=fn(h.target,o);k&&(g=!0,c(()=>{O(k).catch(()=>{}).finally(()=>{g=!1,b&&m()})},on))};addEventListener("error",v,!0),addEventListener("load",m,{once:!0}),c(m,an)}var Ze="__frame_scroll",hn=150,pn=310,mn=160,vn=3e4;function _n(){let t=0,e=!1,n=!1,o=!1,a=0,s=null;const c=_=>{try{sessionStorage.setItem(Ze,JSON.stringify({y:_}))}catch{}},d=()=>{if(clearTimeout(t),s===null)return;const _=s;s=null,c(_)},L=()=>{if(e){e=!1;return}n=!0,s=scrollY,clearTimeout(t),t=setTimeout(d,hn)};try{addEventListener("scroll",L,{passive:!0}),addEventListener("pagehide",d)}catch{}const g=()=>{let _;try{_=sessionStorage.getItem(Ze)}catch{return null}if(_===null)return null;let C;try{C=JSON.parse(_)}catch{C=null}const T=C?.y;if(!(typeof T=="number"&&Number.isFinite(T)&&T>=0)){try{sessionStorage.removeItem(Ze)}catch{}return null}return T};let b=!1;const m=_=>{try{const C=scrollY;scrollTo({top:_,left:0,behavior:"instant"}),a=_,o=!0,clearTimeout(t),s=null,c(_);const T=scrollY;T!==C&&(e=!0),T!==_&&!b&&(b=!0,addEventListener("load",()=>{try{if(scrollY===T){const F=g();m(F!==null?F:a)}}catch{}},{once:!0}))}catch{}},O=()=>{try{return!!location.hash}catch{return!0}};let v=!1;const h=()=>{try{if(v||innerWidth>pn||innerHeight>mn)return;v=!0;const _=Date.now(),C=()=>{try{removeEventListener("resize",C)}catch{}if(Date.now()-_>vn||n||O())return;const T=g();m(T!==null?T:a)};addEventListener("resize",C)}catch{}};let k=!1,B=!1;return{restore(){if(k||(k=!0,O()))return;const _=g();_!==null&&(m(_),h())},promoted(){if(B||(B=!0,O()))return;const _=g();_!==null?(m(_),h()):o&&m(a)}}}function yn(t,e,n,o){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:L=>L})??null}catch{}const s=window.Worker,c=s?.prototype,d=Object.freeze({Worker:s,workerOn:c?.addEventListener,workerPost:c?.postMessage,workerTerminate:c?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});n(t).then(L=>L?.bootTopLevel?L.bootTopLevel(d,o):o.settle()).catch(()=>o.settle())}var Bn="modulepreload",qn=function(t){return"/"+t},Un={},gn=function(e,n,o){let a=Promise.resolve();function s(c){const d=new Event("vite:preloadError",{cancelable:!0});if(d.payload=c,window.dispatchEvent(d),!d.defaultPrevented)throw c}return a.then(c=>{for(const d of c||[])d.status==="rejected"&&s(d.reason);return e().catch(s)})},wn=window===top,Dt=Object.getOwnPropertyDescriptor(window,"claude"),je=Xr(wn,window.__FRAME_PREAMBLE?.topLevel,Dt?.writable===!1),Qe=typeof je=="object"&&je[0],M=Qe?nn():rn();(function(){const t=Object.defineProperty,e=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<n.length;a++){const s=n[a];try{t(e,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[s]}catch{}try{t(e,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[s]=="function"&&o++}if(o&&je==="framed")try{M.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var xt=1e4,bn=2e3,et=2e3,Ht=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function Bt(t){for(const e of Ht)if(e.endsWith(":*"))try{const n=new URL(t);if(`${n.protocol}//${n.hostname}:*`===e)return!0}catch{}else if(t===e)return!0;return!1}var we=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),Ie=window.__FRAME_PREAMBLE?.transforms,tt=window.__FRAME_PREAMBLE?.comments,rt=window.__FRAME_PREAMBLE?.translate,be=window.__FRAME_PREAMBLE?.ldx,En=window.__FRAME_PREAMBLE?.cred;function qt(t){return gn(()=>import("/_runtime/"+t),void 0)}var Ee=new Set,Sn=setTimeout,An=800+800*Math.random();function ie(t){return qt(t).catch(()=>new Promise(e=>Sn(e,An)).then(()=>qt(t+"?r=1")).then(e=>(e!==void 0&&Ee.add(t),e)))}function Ut(t,e,n){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},brokerGen:t.brokerGen,transforms:new Map,shellOrigin:e,shell:n,mount:lt,hooks:Fe,pipe:()=>({wrap:(o,a)=>(...s)=>{try{return a(...s)}catch(c){return Promise.reject(c)}}})}}var fe=null,K=null;function Gt(t,e,n){try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var nt=!1,Fe={editBefore:null,edit:null};function Rn(t,e,n=!1){const o=[];let a;if(n)try{Fe.editBefore?.(t)}catch{}for(const s of t.elements){const c=document.querySelector(`[data-id="${s.target}"]`);if(!c){a=s.target;break}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(d=>!sr(d)||ir(c,d))){a=s.target;break}if(s.text!==void 0&&(!fr(c)||mr(c))){a=s.target;break}for(const[d,L]of Object.entries(s.attrsSet??{}))if(!Kt(c,d)){try{c.setAttribute(d,L)}catch{}zt(c,d,L)}for(const d of s.attrsRemoved??[])Kt(c,d)||(c.removeAttribute(d),zt(c,d,null));typeof s.text=="string"&&hr(c,s.text),o.push(s.target)}if(n)try{Fe.edit?.(t.seq,o,a)}catch{}if(a!==void 0){M.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:o}}))}catch{}}function zt(t,e,n){if(!(t instanceof HTMLInputElement))return;const o=e.toLowerCase();o==="checked"?t.checked=n!==null:o==="value"&&t.type!=="file"&&(t.value=n??"")}function Kt(t,e){const n=e.toLowerCase(),o=t;return n==="data-id"||(n==="value"||n==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function $t(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,nt=!0):nt&&(delete e.dataset.theme,e.style.colorScheme="",nt=!1)}var le=new Map,ot=null;function at(){let t;const e={u:new Promise(n=>{t=n}),r:n=>{e.done=!0,t(n)},done:!1,nulled:!1};return e}function De(t,e){t.nulled=!0,t.ver=e,t.r(null)}function st(t,e){for(const[n,o]of le)o.done||(e&&o.asked?e(n,o):De(o,t))}var kn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),it=!1,lt=(t,e)=>{let n=le.get(t);if(n?.nulled&&it)n=at(),le.set(t,n);else if(!n||n.done){n?.nulled&&K&&M.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},K);return}const o=typeof e=="function"?Object.setPrototypeOf(e,kn):Object.assign(Object.create(null),e);typeof o.then=="function"&&delete o.then,n.want=void 0,n.r(Object.freeze(o))};function Wt(){const t=Dt?.value??{};Gt(window,"claude",t);for(const e of Object.keys(we)){if(t[e]!==void 0){Gt(t,e,t[e]);continue}le.set(e,at())}if(t.use===void 0){const e=n=>{if(typeof n!="string"||!Object.hasOwn(we,n))return Promise.resolve(null);let o=le.get(n);return o?(ot&&(o.nulled||o.want!==void 0)&&(o=ot(n,o)),o.asked=!0,o.u):Promise.resolve(t[n]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(je==="framed"){const t=Ie&&se.test(Ie)?ie(Ie).catch(()=>{}):Promise.resolve(void 0),e=l=>{if(l.type==="auxclick"&&l.button!==1)return;const p=l.target,w=p&&p.closest?p.closest("a[href],area[href]"):null;if(!w)return;const D=w.getAttribute("href");if(!D)return;let j;try{j=new URL(D,document.baseURI)}catch{return}if((j.protocol==="http:"||j.protocol==="https:")&&j.origin!==location.origin){l.preventDefault();const x=(w.getAttribute("target")??"").toLowerCase(),P=l.type==="auxclick"||l.metaKey||l.ctrlKey||l.shiftKey||l.altKey||!["","_self","_top","_parent"].includes(x);M.post({__frame_nav:!0,url:j.href,newTab:P},"*")}};addEventListener("click",e,!0),addEventListener("auxclick",e,!0);const n={},o=l=>{l.isTrusted&&(n.pointer=!0)},a=l=>{l.isTrusted&&(n.click=!0)};addEventListener("pointermove",o,{capture:!0,passive:!0}),addEventListener("click",a,{capture:!0,passive:!0});const s={cb:null};addEventListener("keydown",l=>s.cb?.(l),!0);const c={cb:null};addEventListener("keydown",l=>c.cb?.(l));const d=en();t.then(l=>l?.installEscapeForward?.(s,p=>{K&&M.post(p,K)})),t.then(l=>{try{l?.installFocusKeep?.()}catch{}}),t.then(l=>{if(!l?.wireNav)return;const p=M.port("*");l.wireNav(p),removeEventListener("click",e,!0),removeEventListener("auxclick",e,!0),removeEventListener("pointermove",o,!0),removeEventListener("click",a,!0),l.wireEngagement?.(n,p,d)});let L=null;try{L=_n()}catch{}const g=document.readyState==="loading"?new Promise(l=>document.addEventListener("DOMContentLoaded",()=>l(),{once:!0})):Promise.resolve();let b=null,m=null;try{m=Pr(window.name),b=Mt(null,m)}catch{}const O=Wt();let v=null;try{v=Jr(O,b,{post:(l,p)=>M.post(l,p),dcl:g},m)}catch{}t.then(l=>{try{v&&l?.installHotExtras?.(v)}catch{}});let h=null;const k=()=>Array.isArray(h?.flags)&&h.flags.includes("frame_ldx_runtime")&&!!be&&se.test(be)&&document.querySelector("script#an-form")!==null;try{v?.hydration(k,Nr)}catch{}let B=null,_=0;const C=M.on((l,p,w,D)=>{Bt(p)&&gr(l)&&(D(),h=l.__frame_init,K=p,C(),clearTimeout(_),B?.())});M.post({__frame_connect:!0},"*");try{v?.afterConnect()}catch{}const T=setTimeout,F=clearTimeout;let W=()=>NaN,Q=()=>[];try{W=performance.now.bind(performance),Q=performance.getEntriesByType.bind(performance)}catch{}let V=0;const Se=()=>{try{M.post({__frame_alive:!0},"*")}catch{}V=T(Se,bn)},Ae=()=>F(V);Se(),addEventListener("load",Ae,{once:!0});const Re=new Promise(l=>{B=l,_=setTimeout(()=>{C(),l()},xt)}),q=new WeakSet;addEventListener("error",l=>{l.target&&q.add(l.target)},!0);try{dn(Pt(),En,()=>{t.then(l=>{try{l?.drawRefusedNotice?.()}catch{}})})}catch{}const ke=()=>{let l=[];try{l=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(w=>!w.sheet&&!w.disabled&&!q.has(w)&&w.getAttribute("href")&&URL.canParse(w.href)&&(!w.media||matchMedia(w.media).matches))}catch{}let p=l.length;return p===0?Promise.resolve():new Promise(w=>{try{const D=et-W(),j=T(w,D>0?D<et?D:et:0),x=()=>{--p===0&&(F(j),w())};for(const P of l)P.addEventListener("load",x,{once:!0}),P.addEventListener("error",x,{once:!0})}catch{w()}})};g.then(()=>{try{L?.restore()}catch{}}),Promise.all([Re,g,t]).then(([,,l])=>{if(h?.hostOverlays!==!0||!K)return;let p=!1;try{p=l?.declaresCover?.()===!0}catch{}M.post({__frame_layout:{cover:p}},K)});const Te={cb:null};M.on((l,p)=>{if(Bt(p)&&wr(l)){try{L?.promoted()}catch{}Te.cb?.()}}),Re.then(async()=>{if(!h||!K){st();try{v?.onNoInit()}catch{}return}if($t(h.theme),h.hostVisible===!1&&t.then(i=>i?.applyHostVisible?.(!1,d)),h.hostKeys!==void 0){const i=K,E=h.hostKeys;t.then(y=>y?.installHostKeyForward?.(c,E,N=>M.post(N,i)))}try{v?.onInit(h.hot,K)}catch{}const l=K,p=M.port(l),w=(i,E)=>M.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:i,phase:E}},l),D=i=>M.post({__frame_cap_recovered:{cap:i}},l);let j=h.brokerGen;const x=()=>v?.boot.ver??"",P=x(),ce=(i,E)=>{const y=x();F(E.t),E.want=y,E.t=T(()=>{E.done||De(E,y)},xt),M.post({__frame_cap_want:!0,cap:i,ver:y},l)},xe=(i,E)=>{const y=le.get(i.cap),N=we[i.cap];if(!E||!y||y.done||y.want!==i.ver||!se.test(N))return;if(F(y.t),y.want=void 0,j=i.brokerGen??j,i.ver!==x()){ce(i.cap,y);return}if(!i.grant||i.cap==="network"){De(y,i.ver);return}const Y=fe,$=fe={...Y,capabilities:{...Y.capabilities,[i.cap]:i.grant},capBudgets:{...Y.capBudgets,[i.cap]:{...Y.capBudgets[i.cap],...i.budgets}}};ie(N).then(Pe=>{Ee.has(N)&&D(i.cap),$.brokerGen=j,it=!0;try{Pe?.install?.($)}catch{w(i.cap,"install")}finally{it=!1}},()=>w(i.cap)).then(()=>{y.done||De(y,i.ver)})};let re=!1,Le=!1;M.on((i,E,y)=>{if(E!==l)return;try{if(v?.onShell(i))return}catch{}if(Er(i)&&$t(i.__frame_theme.theme),zr(i)&&xe(i,y),y&&Kr(i)&&(j=i.brokerGen??j),br(i)){const $=i.__frame_host_visible.visible;t.then(Pe=>Pe?.applyHostVisible?.($,d))}yr(i)&&Rn(i.__frame_patch,l,y);const N=i?.__fc_mode;N&&typeof N=="object"&&!re&&tt&&se.test(tt)&&(re=!0,ie(tt).then($=>$.install?.(l,N.on===!0,p)).catch(()=>{}));const Y=i?.__ft_cmd;Y&&typeof Y=="object"&&!Le&&rt&&se.test(rt)&&(Le=!0,ie(rt).then($=>$.install?.(l,Y,p)).catch(()=>{}))});const ne=Object.keys(h.capabilities??{}).filter(i=>Object.hasOwn(we,i)).map(i=>[i,we[i]]).filter(i=>typeof i[1]=="string"&&se.test(i[1])),de=await Promise.allSettled(ne.map(([,i])=>ie(i))),oe=await t,H=l;if(oe?.buildBoot||w("_transforms"),oe?.buildBoot)try{fe=oe.buildBoot(h,oe.TRANSFORMS??{},{shellOrigin:H,mount:lt,hooks:Fe,shell:p},i=>M.post({__frame_cap_telemetry:i},H))}catch{w("_transforms","install"),fe=Ut(h,H,p)}else fe=Ut(h,H,p);oe?.buildBoot&&Ee.has(Ie??"")&&D("_transforms");const he=fe;he.brokerGen=j,de.forEach((i,E)=>{const[y,N]=ne[E];if(i.status!=="fulfilled"){w(y);return}Ee.has(N)&&D(y);try{i.value?.install?.(he)}catch{w(y,"install")}});const X=h.capWants===!0;X&&(ot=(i,E)=>{const y=x();if(!y)return E;if(!E.nulled)return E.want!==y&&ce(i,E),E;if(y===E.ver)return E;const N=at();return le.set(i,N),ce(i,N),N}),st(P,X&&x()!==P?ce:void 0),await g,await ke(),Ae();const Oe=rr(Q,W);M.post(Oe?{__frame_ready:!0,nav:Oe}:{__frame_ready:!0},K),t.then(i=>{i?.installSizeReporter?.(H,Te,p),i?.installPaintReporter?.(p)});let Me=!1;try{Me=k()}catch{}be&&Me?ie(be).then(i=>i?.boot?.({shellOrigin:l,build:he.flags.has(Zr),hot:v?.hot??null,carried:v?.carried(),presented:()=>v?.presented()??!0})).catch(()=>!1).then(i=>{v?.hydrated(),i!==!0?w("_ldx"):Ee.has(be)&&D("_ldx")}):v?.hydrated()})}else Qe&&(Wt(),yn(Qe,Ht,ie,{settle:st,mount:lt}))})();</script><!-- /frame-runtime --><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>BestRatedKelowna Rebrand</title>
+<html>
+<head></head>
+<body>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Best Rated Kelowna Businesses | Trusted Local Directory — BestRatedKelowna.com</title>
+<meta name="description" content="BestRatedKelowna.com is Kelowna's curated local business directory — only businesses your neighbours have verified with 4+ Google stars. Find trusted contractors, restaurants, salons and more. Business owners: get listed for $100/month.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="BestRatedKelowna.com">
+<meta name="geo.region" content="CA-BC">
+<meta name="geo.placename" content="Kelowna, British Columbia">
+<link rel="canonical" href="https://www.bestratedkelowna.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bestratedkelowna.com/">
+<meta property="og:title" content="Best Rated Kelowna Businesses | Trusted Local Directory">
+<meta property="og:description" content="Find Kelowna's most trusted local businesses — curated by your community, verified by real Google reviews. Business owners: list for $100/month flat.">
+<meta property="og:site_name" content="BestRatedKelowna.com">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Rated Kelowna Businesses | Trusted Local Directory">
+<meta name="twitter:description" content="Kelowna's curated local business directory — only 4+ star businesses, verified by real Google reviews. Business owners: $100/month flat.">
+
+<!-- JSON-LD Schemas -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"BestRatedKelowna.com","url":"https://www.bestratedkelowna.com","foundingDate":"2015","description":"Kelowna's curated local business directory. Only businesses with 4+ verified Google stars qualify. Serving the Okanagan Valley since 2015.","areaServed":{"@type":"City","name":"Kelowna","containedInPlace":{"@type":"AdministrativeArea","name":"British Columbia, Canada"}},"address":{"@type":"PostalAddress","addressLocality":"Kelowna","addressRegion":"BC","addressCountry":"CA"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"BestRatedKelowna.com","url":"https://www.bestratedkelowna.com","description":"Kelowna BC local business directory — curated, community-verified, 4+ Google stars required.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.bestratedkelowna.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is BestRatedKelowna.com?","acceptedAnswer":{"@type":"Answer","text":"BestRatedKelowna.com is a curated local business directory in Kelowna, British Columbia. Only businesses with a verified 4-star or higher rating on Google qualify for listing. No paid placements — every business earns its spot through real customer reviews. Operating since 2015."}},{"@type":"Question","name":"How much does it cost to list my business?","acceptedAnswer":{"@type":"Answer","text":"BestRatedKelowna membership costs $100 per month, billed monthly with no long-term contract. No per-click charges, no ad minimums, no hidden fees."}},{"@type":"Question","name":"How do I qualify?","acceptedAnswer":{"@type":"Answer","text":"Your business must be based in the Kelowna or Okanagan Valley area, and have a verified Google Business Profile with a minimum 4.0-star rating from authentic customer reviews."}},{"@type":"Question","name":"Is there a contract? Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"No contract. Month-to-month at $100/month. Cancel anytime before your next billing date with no cancellation fees."}},{"@type":"Question","name":"How long does approval take?","acceptedAnswer":{"@type":"Answer","text":"Most applications are reviewed within 2–3 business days. We verify your Google Business Profile and confirm your rating before approving your listing."}},{"@type":"Question","name":"Does a listing help with Google SEO?","acceptedAnswer":{"@type":"Answer","text":"Your listing provides a local business citation and a link to your website from a locally-relevant domain — both recognized local SEO signals. These supplement your Google Business Profile authority over time."}},{"@type":"Question","name":"What do I get as a member?","acceptedAnswer":{"@type":"Answer","text":"Members receive: a verified business profile page, a link to your website, a phone click-to-call button, category placement, a digital trust badge for your own website, a framed member certificate, and annual awards eligibility."}},{"@type":"Question","name":"Which business categories does BestRatedKelowna cover?","acceptedAnswer":{"@type":"Answer","text":"BestRatedKelowna covers 12 categories: Automotive, Food & Drink, Shopping & Retail, Fitness, Health Professionals, House & Home, Health & Beauty, Contractors, Real Estate, Business/Finance/Legal, Pets, and Things To Do."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Get Listed on BestRatedKelowna.com","description":"Steps for Kelowna business owners to apply for a BestRatedKelowna directory listing.","step":[{"@type":"HowToStep","name":"Check Your Eligibility","text":"Enter your business name or Google Profile URL to see if you qualify."},{"@type":"HowToStep","name":"Submit Your Application","text":"Provide your business details and contact information. Takes under 5 minutes."},{"@type":"HowToStep","name":"We Verify Your Google Rating","text":"We confirm your 4.0+ star rating and review authenticity within 2–3 business days."},{"@type":"HowToStep","name":"Your Listing Goes Live","text":"Once approved, your verified profile is live and visible to Kelowna residents searching for the best local businesses."},{"@type":"HowToStep","name":"Receive Your Member Kit","text":"You receive a digital trust badge for your website, a verified member certificate, and your website link."}]}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&amp;display=swap">
 
 <style>
-:root {
-  --navy:           #1B2152;
-  --navy-mid:       #2B3270;
-  --periwinkle:     #7B84B8;
-  --lavender:       #B8BDD9;
-  --lavender-light: #ECEEF8;
-  --lavender-pale:  #F5F6FC;
-  --rose:           #C4909A;
-  --rose-mid:       #B07582;
-  --rose-light:     #EDD5D9;
-  --rose-pale:      #FAF3F4;
-  --gold:           #C9A44A;
-  --gold-light:     #F8F0DC;
-  --gold-pale:      #FFFBF2;
-  --white:          #FFFFFF;
-  --bg:          var(--lavender-pale);
-  --surface:     var(--white);
-  --surface-alt: var(--lavender-light);
-  --text-head:   var(--navy);
-  --text-body:   #3D4260;
-  --text-muted:  #8890B0;
-  --border:      #D8DBF0;
-  --shadow-sm:   0 2px 12px rgba(27,33,82,0.07);
-  --shadow-md:   0 6px 28px rgba(27,33,82,0.13);
+:root{
+  --navy:#1B2152;--navy-mid:#2B3270;--periwinkle:#7B84B8;
+  --lavender:#B8BDD9;--lavender-light:#ECEEF8;--lavender-pale:#F5F6FC;
+  --rose:#C4909A;--rose-mid:#B07582;--rose-light:#EDD5D9;--rose-pale:#FAF3F4;
+  --gold:#C9A44A;--gold-light:#F8F0DC;--gold-pale:#FFFBF2;
+  --white:#FFFFFF;
+  --bg:var(--lavender-pale);--surface:var(--white);--surface-alt:var(--lavender-light);
+  --text-head:var(--navy);--text-body:#3D4260;--text-muted:#8890B0;
+  --border:#D8DBF0;--shadow-sm:0 2px 12px rgba(27,33,82,.07);--shadow-md:0 6px 28px rgba(27,33,82,.13);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg:#0E1230; --surface:#171D4A; --surface-alt:#1E2560;
-    --text-head:#E8EAF6; --text-body:#9BA5CC; --text-muted:#5A6090;
-    --border:#252D6A; --shadow-sm:0 2px 12px rgba(0,0,0,.25); --shadow-md:0 6px 28px rgba(0,0,0,.4);
-    --lavender-pale:#0E1230; --lavender-light:#171D4A; --rose-pale:#1A1218; --rose-light:#3D2530; --gold-light:#2A2010; --gold-pale:#1E1A0C;
-  }
-}
-:root[data-theme="dark"] {
-  --bg:#0E1230; --surface:#171D4A; --surface-alt:#1E2560;
-  --text-head:#E8EAF6; --text-body:#9BA5CC; --text-muted:#5A6090;
-  --border:#252D6A; --shadow-sm:0 2px 12px rgba(0,0,0,.25); --shadow-md:0 6px 28px rgba(0,0,0,.4);
-  --lavender-pale:#0E1230; --lavender-light:#171D4A; --rose-pale:#1A1218; --rose-light:#3D2530; --gold-light:#2A2010; --gold-pale:#1E1A0C;
-}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1230;--surface:#171D4A;--surface-alt:#1E2560;--text-head:#E8EAF6;--text-body:#9BA5CC;--text-muted:#5A6090;--border:#252D6A;--shadow-sm:0 2px 12px rgba(0,0,0,.25);--shadow-md:0 6px 28px rgba(0,0,0,.4);--lavender-pale:#0E1230;--lavender-light:#171D4A;--rose-pale:#1A1218;--rose-light:#3D2530;--gold-light:#2A2010;--gold-pale:#1E1A0C;}}
+:root[data-theme="dark"]{--bg:#0E1230;--surface:#171D4A;--surface-alt:#1E2560;--text-head:#E8EAF6;--text-body:#9BA5CC;--text-muted:#5A6090;--border:#252D6A;--shadow-sm:0 2px 12px rgba(0,0,0,.25);--shadow-md:0 6px 28px rgba(0,0,0,.4);--lavender-pale:#0E1230;--lavender-light:#171D4A;--rose-pale:#1A1218;--rose-light:#3D2530;--gold-light:#2A2010;--gold-pale:#1E1A0C;}
 
 *,*::before,*::after{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--text-body);font-family:'DM Sans',system-ui,sans-serif;font-size:15px;line-height:1.65;}
 h1,h2,h3,h4{margin:0;} img{max-width:100%;} a{color:inherit;}
 .container{max-width:1100px;margin-inline:auto;padding-inline:24px;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
 
 /* TOPBAR */
 .topbar{background:var(--navy);padding:9px 24px;text-align:center;}
@@ -55,7 +64,7 @@ h1,h2,h3,h4{margin:0;} img{max-width:100%;} a{color:inherit;}
 .topbar a{color:var(--rose-light);text-decoration:none;font-weight:700;margin-left:5px;}
 
 /* HEADER */
-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:env(safe-area-inset-top,0px);z-index:100;box-shadow:var(--shadow-sm);}
+header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding-block:13px;gap:16px;}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;}
 .logo-mark{width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -66,126 +75,174 @@ header{background:var(--surface);border-bottom:1px solid var(--border);position:
 nav{display:flex;align-items:center;gap:4px;}
 nav a{color:var(--text-body);text-decoration:none;font-size:13.5px;font-weight:500;padding:7px 13px;border-radius:7px;transition:color .18s,background .18s;}
 nav a:hover{color:var(--navy);background:var(--lavender-light);}
-.btn-cta{background:var(--rose)!important;color:#fff!important;border-radius:24px!important;padding:8px 20px!important;font-weight:600!important;font-size:13px!important;transition:background .18s,transform .15s!important;}
-.btn-cta:hover{background:var(--rose-mid)!important;transform:translateY(-1px);}
+.btn-cta{background:var(--navy)!important;color:#fff!important;border-radius:24px!important;padding:8px 20px!important;font-weight:600!important;font-size:13px!important;}
+.btn-cta:hover{background:var(--navy-mid)!important;}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--text-head);}
 
-/* HERO */
-.hero{background:linear-gradient(145deg,#1B2152 0%,#2B3270 45%,#3A3F88 80%,#4A3D7A 100%);padding:72px 24px 90px;position:relative;overflow:hidden;text-align:center;}
-.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 85% 15%,rgba(123,132,184,.3) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 8% 85%,rgba(196,144,154,.22) 0%,transparent 55%);}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(to top,var(--bg) 0%,transparent 100%);pointer-events:none;}
-.hero-inner{position:relative;z-index:1;max-width:660px;margin-inline:auto;}
-.hero-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(184,189,217,.18);border:1px solid rgba(184,189,217,.3);border-radius:20px;padding:5px 14px;margin-bottom:20px;color:var(--lavender);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;}
-.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,6vw,56px);font-weight:600;line-height:1.1;color:#fff;text-wrap:balance;margin-bottom:14px;letter-spacing:-.02em;}
+/* ── HERO ── */
+.hero{background:linear-gradient(155deg,#1B2152 0%,#2B3270 50%,#3A3F88 80%,#4A3D7A 100%);padding:80px 24px 100px;position:relative;overflow:hidden;text-align:center;}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 85% 15%,rgba(123,132,184,.25) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 8% 85%,rgba(196,144,154,.18) 0%,transparent 55%);}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,var(--bg) 0%,transparent 100%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin-inline:auto;}
+.hero-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(201,164,74,.18);border:1px solid rgba(201,164,74,.35);border-radius:20px;padding:5px 14px;margin-bottom:22px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(36px,6.5vw,60px);font-weight:600;line-height:1.08;color:#fff;text-wrap:balance;margin-bottom:18px;letter-spacing:-.025em;}
 .hero h1 em{font-style:italic;color:var(--rose-light);}
-.hero-desc{color:rgba(184,189,217,.85);font-size:15.5px;margin:0 0 32px;}
-.search-wrap{display:flex;background:#fff;border-radius:50px;overflow:hidden;box-shadow:0 10px 48px rgba(0,0,0,.28);max-width:560px;margin-inline:auto;}
-.search-wrap input{flex:1;border:none;outline:none;padding:16px 22px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--navy);background:transparent;}
+.hero-desc{color:rgba(184,189,217,.88);font-size:16px;line-height:1.7;margin:0 0 36px;text-wrap:balance;max-width:560px;margin-inline:auto;}
+.search-wrap{display:flex;background:#fff;border-radius:50px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.3);max-width:580px;margin-inline:auto;}
+.search-wrap input{flex:1;border:none;outline:none;padding:17px 24px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--navy);background:transparent;}
 .search-wrap input::placeholder{color:#9BA5C0;}
-.search-wrap button{background:var(--rose);color:#fff;border:none;padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;border-radius:0 50px 50px 0;transition:background .18s;white-space:nowrap;}
+.search-wrap button{background:var(--rose);color:#fff;border:none;padding:15px 30px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;border-radius:0 50px 50px 0;transition:background .18s;white-space:nowrap;}
 .search-wrap button:hover{background:var(--rose-mid);}
+.hero-meta{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+.hero-stat{color:rgba(184,189,217,.65);font-size:12.5px;font-weight:500;}
+.hero-stat strong{color:rgba(255,255,255,.75);font-weight:700;}
+.hero-divider{color:rgba(184,189,217,.25);font-size:10px;}
 
-/* TRUST BAR */
-.trust-bar{background:var(--surface);border-bottom:1px solid var(--border);}
-.trust-inner{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;}
-.trust-item{display:flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid var(--border);flex:1;min-width:200px;}
-.trust-item:last-child{border-right:none;}
-.trust-star{color:var(--gold);font-size:17px;line-height:1;}
-.trust-copy strong{display:block;font-size:13px;font-weight:700;color:var(--text-head);line-height:1.2;}
-.trust-copy span{font-size:11.5px;color:var(--text-muted);}
+/* ── PROOF BAR ── */
+.proof-bar{background:var(--surface);border-bottom:1px solid var(--border);}
+.proof-bar-inner{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;}
+.proof-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 32px;border-right:1px solid var(--border);flex:1;min-width:160px;text-align:center;}
+.proof-stat:last-child{border-right:none;}
+.proof-stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:3px;}
+.proof-stat-num b{color:var(--gold);}
+.proof-stat-label{font-size:11px;font-weight:600;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase;}
 
-/* SECTION HEADER */
-.s-head{text-align:center;margin-bottom:44px;}
-.s-eyebrow{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;}
-.s-head h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,4vw,40px);font-weight:600;color:var(--text-head);text-wrap:balance;letter-spacing:-.015em;margin-bottom:12px;}
-.s-head p{color:var(--text-muted);font-size:14.5px;max-width:500px;margin-inline:auto;line-height:1.7;}
+/* ── CONSUMER VALUE — WHY US OVER GOOGLE ── */
+.why-us{background:var(--surface);padding:80px 24px;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.why-left h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--text-head);line-height:1.18;text-wrap:balance;letter-spacing:-.02em;margin-bottom:18px;}
+.why-left h2 em{font-style:italic;color:var(--rose);}
+.why-left p{font-size:15px;color:var(--text-body);line-height:1.75;margin:0 0 16px;}
+.why-points{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
+.why-point{display:flex;gap:14px;align-items:flex-start;}
+.why-point-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px;}
+.why-point-text{font-size:14px;color:var(--text-body);line-height:1.6;}
+.why-point-text strong{display:block;color:var(--text-head);font-weight:600;font-size:14.5px;margin-bottom:2px;}
+.why-right{background:var(--lavender-pale);border:1px solid var(--border);border-radius:22px;padding:32px 30px;}
+.why-right h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--text-head);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+.compare-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;}
+.compare-row:last-child{margin-bottom:0;}
+.compare-col{flex:1;font-size:13px;line-height:1.5;}
+.compare-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.compare-col.google-col .compare-head{color:var(--text-muted);}
+.compare-col.us-col .compare-head{color:var(--gold);}
+.compare-col p{color:var(--text-body);margin:0;}
+.compare-col.us-col p{color:var(--navy);font-weight:500;}
+.compare-divider{width:1px;background:var(--border);flex-shrink:0;margin-top:26px;}
+.compare-sep{border:none;border-top:1px solid var(--border);margin:14px 0;}
 
-/* MISSION */
-.mission{background:var(--surface);padding:80px 24px;}
-.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-.mission-left h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--text-head);line-height:1.2;text-wrap:balance;letter-spacing:-.02em;margin-bottom:20px;}
-.mission-left h2 em{font-style:italic;color:var(--rose);}
-.mission-left p{font-size:15px;color:var(--text-body);line-height:1.75;margin:0 0 16px;}
-.mission-left p:last-of-type{margin-bottom:0;}
-.mission-right{border-left:3px solid var(--gold);padding-left:32px;}
-.mission-right blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(20px,3vw,26px);font-style:italic;font-weight:600;color:var(--text-head);line-height:1.45;margin:0 0 18px;text-wrap:balance;}
-.mission-right cite{font-size:12px;font-weight:700;font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+/* ── BUSINESS OWNER PATHWAY ── */
+.owner-section{background:var(--navy);padding:80px 24px;}
+.owner-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.owner-left .s-eyebrow{color:var(--rose-light);}
+.owner-left h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:#fff;line-height:1.15;text-wrap:balance;letter-spacing:-.02em;margin-bottom:18px;}
+.owner-left p{color:var(--lavender);font-size:15px;line-height:1.75;margin:0 0 32px;}
+.owner-check-form{background:rgba(255,255,255,.07);border:1px solid rgba(184,189,217,.2);border-radius:18px;padding:28px 26px;}
+.owner-check-form p{color:var(--lavender);font-size:13.5px;margin:0 0 16px;line-height:1.55;}
+.check-input-row{display:flex;gap:8px;}
+.check-input-row input{flex:1;background:rgba(255,255,255,.1);border:1.5px solid rgba(184,189,217,.25);border-radius:12px;padding:12px 16px;font-size:14px;font-family:'DM Sans',sans-serif;color:#fff;outline:none;transition:border-color .18s;}
+.check-input-row input::placeholder{color:rgba(184,189,217,.5);}
+.check-input-row input:focus{border-color:var(--gold);}
+.check-input-row button{background:var(--gold);color:var(--navy);border:none;border-radius:12px;padding:12px 20px;font-size:13.5px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:opacity .18s;}
+.check-input-row button:hover{opacity:.88;}
+.owner-soft-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;}
+.owner-soft-link{font-size:12.5px;color:rgba(184,189,217,.55);text-decoration:none;transition:color .18s;}
+.owner-soft-link:hover{color:var(--lavender);}
+.owner-right{display:flex;flex-direction:column;gap:14px;}
+.owner-feature{display:flex;gap:14px;align-items:flex-start;}
+.owner-feature-check{width:28px;height:28px;border-radius:50%;background:rgba(201,164,74,.15);border:1.5px solid rgba(201,164,74,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:14px;font-weight:700;}
+.owner-feature-text strong{display:block;font-size:14px;color:#fff;font-weight:600;margin-bottom:2px;}
+.owner-feature-text p{font-size:13px;color:var(--lavender);margin:0;line-height:1.5;}
 
-/* ── SLIDESHOW: WHAT MAKES US DIFFERENT ── */
-.different{background:var(--navy);padding:80px 0;overflow:hidden;position:relative;}
+/* ── SHOW THE PRODUCT — LISTING MOCKUP ── */
+.product-demo{background:var(--bg);padding:80px 24px;}
+.product-demo-inner{max-width:1000px;margin-inline:auto;}
+.product-demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:48px;}
+.demo-context h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--text-head);margin-bottom:12px;}
+.demo-context p{font-size:14.5px;color:var(--text-body);line-height:1.75;margin:0 0 24px;}
+.what-you-get{display:flex;flex-direction:column;gap:10px;}
+.get-item{display:flex;align-items:center;gap:12px;font-size:13.5px;color:var(--text-body);}
+.get-check{width:22px;height:22px;border-radius:50%;background:var(--gold-light);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:11px;font-weight:700;flex-shrink:0;}
+
+/* Listing Card Mockup */
+.listing-mockup{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-md);}
+.listing-banner{height:130px;background:linear-gradient(135deg,#1F2560 0%,#3A3F88 50%,#6B4494 100%);position:relative;display:flex;align-items:flex-end;padding:16px 20px;}
+.listing-badge{background:var(--gold);color:var(--navy);font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:4px 12px;border-radius:20px;}
+.listing-body{padding:20px 22px 22px;}
+.listing-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text-head);margin-bottom:2px;}
+.listing-cat{font-size:12px;color:var(--rose);font-weight:600;letter-spacing:.06em;margin-bottom:10px;text-transform:uppercase;}
+.listing-stars-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.listing-stars{color:var(--gold);font-size:15px;letter-spacing:1.5px;}
+.listing-rating{font-size:14px;font-weight:700;color:var(--text-head);}
+.listing-reviews{font-size:12px;color:var(--text-muted);}
+.listing-info{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-size:12.5px;color:var(--text-body);}
+.listing-info-row{display:flex;align-items:center;gap:8px;}
+.listing-info-icon{width:16px;text-align:center;color:var(--periwinkle);font-size:12px;flex-shrink:0;}
+.listing-actions{display:flex;gap:8px;}
+.listing-btn{flex:1;padding:9px 12px;border-radius:10px;text-align:center;font-size:12.5px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.listing-btn.primary{background:var(--rose);color:#fff;}
+.listing-btn.secondary{background:var(--lavender-light);color:var(--navy);border:1.5px solid var(--border);}
+.listing-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:14px;}
+.listing-photo{aspect-ratio:1;border-radius:6px;background:var(--lavender-light);}
+.lp1{background:linear-gradient(135deg,#ECEEF8,#D8DBF0);}
+.lp2{background:linear-gradient(135deg,#FAF3F4,#EDD5D9);}
+.lp3{background:linear-gradient(135deg,#FFFBF2,#F8F0DC);}
+.lp4{background:linear-gradient(135deg,#F5F6FC,#ECEEF8);}
+.listing-verified-bar{background:var(--gold-pale);border-top:1px solid var(--gold-light);padding:10px 22px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gold);font-weight:600;}
+
+/* ── SLIDESHOW ── */
+.different{background:var(--navy-mid);padding:80px 0;overflow:hidden;}
 .different-head{text-align:center;padding:0 24px;margin-bottom:48px;}
 .different-head .s-eyebrow{color:var(--rose-light);}
 .different-head h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,5vw,44px);font-weight:600;color:#fff;text-wrap:balance;letter-spacing:-.02em;margin-bottom:10px;}
 .different-head p{color:var(--lavender);font-size:15px;max-width:500px;margin-inline:auto;}
-
 .slideshow{position:relative;}
 .slides-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;}
-.slide{flex:0 0 100%;padding:0 24px;}
-.slide-inner{max-width:900px;margin-inline:auto;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;}
-.slide-num{font-family:'Cormorant Garamond',serif;font-size:clamp(80px,15vw,140px);font-weight:700;line-height:1;color:rgba(184,189,217,.1);letter-spacing:-.04em;font-variant-numeric:tabular-nums;user-select:none;}
-.slide-content{}
+.slide{flex:0 0 100%;padding:0 80px;}
+.slide-inner{max-width:880px;margin-inline:auto;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;}
+.slide-num{font-family:'Cormorant Garamond',serif;font-size:clamp(80px,15vw,140px);font-weight:700;line-height:1;color:rgba(184,189,217,.08);letter-spacing:-.04em;user-select:none;}
 .slide-tag{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-light);margin-bottom:14px;display:block;}
 .slide-content h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(22px,3.5vw,34px);font-weight:700;color:#fff;line-height:1.25;margin-bottom:16px;text-wrap:balance;}
 .slide-content p{font-size:14.5px;color:var(--lavender);line-height:1.75;margin:0 0 20px;}
-.slide-vs{background:rgba(201,164,74,.12);border:1px solid rgba(201,164,74,.3);border-radius:12px;padding:14px 18px;}
+.slide-vs{background:rgba(201,164,74,.1);border:1px solid rgba(201,164,74,.25);border-radius:12px;padding:14px 18px;}
 .slide-vs-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
-.slide-vs p{font-size:13.5px;color:rgba(255,255,255,.75);margin:0;line-height:1.55;}
-
-/* Dots + progress */
-.slides-nav{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:40px;padding:0 24px;}
+.slide-vs p{font-size:13.5px;color:rgba(255,255,255,.7);margin:0;line-height:1.55;}
+/* Arrows */
+.slide-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;transition:background .2s,border-color .2s;z-index:5;padding:0;}
+.slide-arrow:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45);}
+.slide-arrow svg{width:20px;height:20px;flex-shrink:0;}
+.slide-arrow.prev{left:16px;}
+.slide-arrow.next{right:16px;}
+.slides-nav{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:40px;}
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(184,189,217,.3);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s;}
 .dot.active{background:var(--gold);transform:scale(1.3);}
-.slide-progress{height:2px;background:rgba(184,189,217,.15);margin-top:28px;position:relative;overflow:hidden;}
-.slide-progress-bar{height:100%;background:var(--gold);width:0%;transition:width linear;}
+.slide-progress{height:2px;background:rgba(184,189,217,.12);margin-top:24px;overflow:hidden;}
+.slide-progress-bar{height:100%;background:var(--gold);width:0%;}
 
-/* ── PRICING ── */
-.pricing{background:var(--surface);padding:80px 24px;}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin-inline:auto;}
-.price-card{border-radius:20px;padding:36px 32px;position:relative;}
-.price-card.google{background:var(--lavender-light);border:1px solid var(--border);}
-.price-card.ours{background:var(--navy);border:2px solid var(--gold);}
-.price-card-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.price-card.google .price-card-label{color:var(--text-muted);}
-.price-card.ours .price-card-label{color:var(--gold);}
-.price-big{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,64px);font-weight:700;line-height:1;margin-bottom:6px;font-variant-numeric:tabular-nums;}
-.price-card.google .price-big{color:var(--text-head);}
-.price-card.ours .price-big{color:#fff;}
-.price-big sup{font-size:0.4em;vertical-align:super;font-family:'DM Sans',sans-serif;font-weight:600;}
-.price-big sub{font-family:'DM Sans',sans-serif;font-size:0.28em;font-weight:500;vertical-align:baseline;opacity:.7;}
-.price-note{font-size:13px;margin:0 0 22px;line-height:1.55;}
-.price-card.google .price-note{color:var(--text-muted);}
-.price-card.ours .price-note{color:var(--lavender);}
-.price-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;}
-.price-list li{font-size:13.5px;display:flex;align-items:flex-start;gap:10px;line-height:1.45;}
-.price-card.google .price-list li{color:var(--text-body);}
-.price-card.ours .price-list li{color:rgba(255,255,255,.8);}
-.price-list li::before{font-size:13px;flex-shrink:0;margin-top:1px;}
-.price-card.google .price-list li::before{content:'✗';color:#D07070;}
-.price-card.ours .price-list li::before{content:'✓';color:var(--gold);}
-.price-card.ours .best-value{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:5px 16px;border-radius:20px;white-space:nowrap;}
-.price-cta{display:block;width:100%;margin-top:26px;background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:14px;border-radius:12px;text-align:center;text-decoration:none;letter-spacing:.02em;transition:opacity .18s,transform .15s;}
-.price-cta:hover{opacity:.9;transform:translateY(-1px);}
+/* ── SECTION HEADER ── */
+.s-head{text-align:center;margin-bottom:44px;}
+.s-eyebrow{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;}
+.s-head h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,4vw,40px);font-weight:600;color:var(--text-head);text-wrap:balance;letter-spacing:-.015em;margin-bottom:12px;}
+.s-head p{color:var(--text-muted);font-size:14.5px;max-width:520px;margin-inline:auto;line-height:1.7;}
 
-/* PROCESS */
-.steps{background:var(--navy-mid);padding:54px 24px;}
-.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
-.step{text-align:center;padding:28px 16px;border-radius:14px;transition:background .18s;}
-.step:hover{background:rgba(255,255,255,.06);}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:rgba(184,189,217,.3);line-height:1;margin-bottom:12px;font-variant-numeric:tabular-nums;}
-.step h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;}
-.step p{font-size:13px;color:var(--lavender);margin:0;line-height:1.55;}
+/* ── METRICS / RESULTS TABLE ── */
+.metrics{background:var(--surface);padding:80px 24px;}
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:960px;margin-inline:auto;}
+.metrics-left h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--text-head);margin-bottom:10px;}
+.metrics-left p{font-size:14.5px;color:var(--text-body);line-height:1.75;margin:0 0 12px;}
+.metrics-note{font-size:12.5px;color:var(--text-muted);font-style:italic;line-height:1.55;}
+.metrics-table{background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.metrics-row{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);}
+.metrics-row:last-child{border-bottom:none;}
+.metrics-row:nth-child(even){background:rgba(27,33,82,.025);}
+.metrics-row-label{font-size:13.5px;color:var(--text-body);}
+.metrics-row-val{font-size:14px;font-weight:700;color:var(--navy);}
+.metrics-row-val.pending{color:var(--text-muted);font-weight:500;font-style:italic;font-size:13px;}
+.metrics-cta{margin-top:20px;}
+.metrics-cta a{font-size:13px;color:var(--rose);font-weight:600;text-decoration:none;}
+.metrics-cta a:hover{text-decoration:underline;}
 
-/* VALUES */
-.values{background:var(--bg);padding:80px 24px;}
-.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:var(--border);}
-.value-card{background:var(--surface);padding:38px 36px;transition:background .2s;}
-.value-card:hover{background:var(--gold-pale);}
-.value-tag{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.value-tag::before{content:'';display:block;width:24px;height:2px;background:var(--gold);flex-shrink:0;}
-.value-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:700;color:var(--text-head);margin-bottom:12px;letter-spacing:-.01em;}
-.value-card p{font-size:14px;color:var(--text-body);line-height:1.75;margin:0;}
-
-/* CATEGORIES */
+/* ── CATEGORIES ── */
 .categories{background:var(--surface-alt);padding:80px 24px 68px;}
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 16px 16px;text-align:center;cursor:pointer;text-decoration:none;display:block;transition:box-shadow .2s,transform .2s,border-color .2s;}
@@ -193,38 +250,50 @@ nav a:hover{color:var(--navy);background:var(--lavender-light);}
 .cat-name{font-size:13px;font-weight:600;color:var(--text-head);display:block;line-height:1.35;}
 .cat-action{font-size:11px;color:var(--rose);font-weight:500;letter-spacing:.04em;display:block;margin-top:5px;}
 
-/* STATS */
-.stats{background:var(--navy);padding:54px 24px;}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;line-height:1;color:#fff;margin-bottom:6px;font-variant-numeric:tabular-nums;}
-.stat-num b{color:var(--gold);}
-.stat-label{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lavender);}
+/* ── DISCOVERY FEATURES ── */
+.discovery{background:var(--surface);padding:72px 24px;}
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.disc-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px 24px;transition:box-shadow .2s;}
+.disc-card:hover{box-shadow:var(--shadow-sm);}
+.disc-tag{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;display:block;}
+.disc-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--text-head);margin-bottom:8px;}
+.disc-card p{font-size:13.5px;color:var(--text-muted);margin:0;line-height:1.6;}
 
-/* TESTIMONIALS */
+/* ── VALUES ── */
+.values{background:var(--bg);padding:80px 24px;}
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:var(--border);}
+.value-card{background:var(--surface);padding:38px 36px;transition:background .2s;}
+.value-card:hover{background:var(--gold-pale);}
+.value-tag{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.value-tag::before{content:'';display:block;width:24px;height:2px;background:var(--gold);flex-shrink:0;}
+.value-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:700;color:var(--text-head);margin-bottom:12px;}
+.value-card p{font-size:14px;color:var(--text-body);line-height:1.75;margin:0;}
+
+/* ── TESTIMONIALS ── */
 .testimonials{background:var(--surface);padding:80px 24px;}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .testi-card{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column;}
 .testi-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:18px;}
-.testi-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;font-style:italic;font-weight:600;color:var(--text-head);line-height:1.55;flex:1;margin-bottom:22px;text-wrap:balance;}
-.testi-quote::before{content:'\201C';}
-.testi-quote::after{content:'\201D';}
+.testi-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;font-style:italic;font-weight:600;color:var(--text-head);line-height:1.55;flex:1;margin-bottom:16px;text-wrap:balance;}
+.testi-quote::before{content:'\201C';} .testi-quote::after{content:'\201D';}
+.testi-result{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:10px;padding:12px 14px;margin-bottom:16px;}
+.testi-result-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.testi-result p{font-size:13px;color:var(--text-body);margin:0;line-height:1.55;}
 .testi-attribution{border-top:1px solid var(--border);padding-top:16px;}
 .testi-name{font-size:13.5px;font-weight:700;color:var(--text-head);}
 .testi-biz{font-size:12px;color:var(--text-muted);margin-top:2px;}
-.testi-rating{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;margin-top:7px;}
+.testi-link{font-size:11.5px;color:var(--rose);font-weight:600;text-decoration:none;margin-top:5px;display:inline-block;}
+.testi-link:hover{text-decoration:underline;}
+.testi-rating{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;margin-top:6px;}
 
-/* FEATURED */
+/* ── FEATURED BUSINESSES ── */
 .featured{background:var(--surface-alt);padding:80px 24px 68px;}
 .biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 .biz-card{background:var(--surface);border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .2s;}
 .biz-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
 .biz-banner{height:10px;}
-.b1{background:linear-gradient(90deg,#1F2560,#3546A0);}
-.b2{background:linear-gradient(90deg,#3D2A58,#6B4494);}
-.b3{background:linear-gradient(90deg,#183A54,#256884);}
-.b4{background:linear-gradient(90deg,#262A58,#46499A);}
-.b5{background:linear-gradient(90deg,#3A1E42,#7A3E64);}
-.b6{background:linear-gradient(90deg,#183622,#2A6042);}
+.b1{background:linear-gradient(90deg,#1F2560,#3546A0);} .b2{background:linear-gradient(90deg,#3D2A58,#6B4494);} .b3{background:linear-gradient(90deg,#183A54,#256884);}
+.b4{background:linear-gradient(90deg,#262A58,#46499A);} .b5{background:linear-gradient(90deg,#3A1E42,#7A3E64);} .b6{background:linear-gradient(90deg,#183622,#2A6042);}
 .biz-body{padding:20px 20px 18px;}
 .biz-badge{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:8px;}
 .biz-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--text-head);line-height:1.2;margin-bottom:3px;}
@@ -235,66 +304,117 @@ nav a:hover{color:var(--navy);background:var(--lavender-light);}
 .biz-btn{display:inline-flex;align-items:center;gap:5px;color:var(--navy);font-size:12.5px;font-weight:600;text-decoration:none;border:1.5px solid var(--border);padding:6px 15px;border-radius:20px;transition:background .18s,border-color .18s;}
 .biz-btn:hover{background:var(--lavender-light);border-color:var(--lavender);}
 
+/* ── FAQ ── */
+.faq{background:var(--bg);padding:80px 24px;}
+.faq-list{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:2px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--border);}
+.faq-item{background:var(--surface);}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 26px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--text-head);line-height:1.4;transition:background .18s;}
+.faq-q:hover{background:var(--gold-pale);}
+.faq-q svg{width:18px;height:18px;flex-shrink:0;color:var(--gold);transition:transform .25s;}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--text-body);line-height:1.75;border-top:1px solid var(--border);}
+.faq-a-inner p{margin:14px 0 0;}
+
+/* ── URGENCY ── */
+.urgency{background:var(--rose-pale);border-top:1px solid var(--rose-light);border-bottom:1px solid var(--rose-light);padding:48px 24px;}
+.urgency-inner{max-width:860px;margin-inline:auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;}
+.urgency-left h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+.urgency-left p{font-size:14px;color:var(--text-body);margin:0;line-height:1.65;}
+.urgency-spots{display:flex;flex-direction:column;gap:10px;}
+.spot-row{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.spot-cat{font-size:13.5px;font-weight:600;color:var(--text-head);}
+.spot-count{font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+.spot-count.few{color:var(--rose-mid);background:var(--rose-light);}
+.spot-count.one{color:#A03050;background:#F8D8E0;}
+.spot-count.open{color:var(--navy);background:var(--gold-light);}
+
+/* ── STATS BAR ── */
+.stats{background:var(--navy);padding:54px 24px;}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;line-height:1;color:#fff;margin-bottom:6px;}
+.stat-num b{color:var(--gold);}
+.stat-label{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lavender);}
+
+/* ── FINAL CTA ── */
+.cta-section{background:linear-gradient(150deg,#1B2152 0%,#2B3270 60%,#3A2060 100%);padding:90px 24px;text-align:center;position:relative;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 0%,rgba(201,164,74,.12) 0%,transparent 65%);pointer-events:none;}
+.cta-inner{position:relative;z-index:1;max-width:640px;margin-inline:auto;}
+.cta-section .s-eyebrow{color:var(--rose-light);}
+.cta-section h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4.5vw,48px);font-weight:600;color:#fff;text-wrap:balance;letter-spacing:-.02em;margin-bottom:16px;line-height:1.1;}
+.cta-section h2 em{font-style:italic;color:var(--gold);}
+.cta-section p{color:var(--lavender);font-size:15px;line-height:1.75;margin-bottom:36px;}
+.cta-primary{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;padding:16px 38px;border-radius:34px;text-decoration:none;letter-spacing:.015em;transition:opacity .18s,transform .15s;margin-bottom:14px;}
+.cta-primary:hover{opacity:.9;transform:translateY(-2px);}
+.cta-conditions{font-size:12.5px;color:rgba(184,189,217,.5);line-height:1.6;margin-bottom:28px;}
+.cta-soft-row{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;}
+.cta-soft{color:rgba(184,189,217,.6);font-size:13px;font-weight:500;text-decoration:none;padding:8px 18px;border:1px solid rgba(184,189,217,.2);border-radius:24px;transition:color .18s,border-color .18s;}
+.cta-soft:hover{color:var(--lavender);border-color:rgba(184,189,217,.4);}
+
 /* VIEW ALL */
 .view-all{text-align:center;margin-top:40px;}
 .btn-ghost{display:inline-flex;align-items:center;gap:8px;color:var(--text-head);font-size:13.5px;font-weight:600;text-decoration:none;border:2px solid var(--lavender);padding:11px 30px;border-radius:30px;transition:background .2s,border-color .2s,color .2s;font-family:'DM Sans',sans-serif;cursor:pointer;background:transparent;}
 .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
-/* PLEDGE */
-.pledge{background:var(--navy);padding:68px 24px;text-align:center;}
-.pledge h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,4vw,40px);font-weight:600;color:#fff;text-wrap:balance;letter-spacing:-.015em;margin-bottom:16px;}
-.pledge h2 em{font-style:italic;color:var(--rose-light);}
-.pledge p{color:var(--lavender);font-size:15px;max-width:580px;margin-inline:auto;line-height:1.75;margin-bottom:32px;}
-.pledge-link{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:13.5px;padding:13px 32px;border-radius:30px;text-decoration:none;letter-spacing:.02em;transition:opacity .18s,transform .15s;}
-.pledge-link:hover{opacity:.9;transform:translateY(-1px);}
-
 /* FOOTER */
 footer{background:#10163A;padding:54px 24px 28px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:38px;}
 .f-brand .logo-name{color:#fff;} .f-brand .logo-sub{color:var(--rose-light);}
-.f-brand p{color:var(--lavender);font-size:13px;margin-top:14px;max-width:275px;line-height:1.7;}
+.f-brand p{color:var(--lavender);font-size:13px;margin-top:14px;max-width:280px;line-height:1.7;}
 .f-col h4{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lavender);margin-bottom:14px;}
 .f-col a{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-size:13px;margin-bottom:9px;transition:color .18s;}
 .f-col a:hover{color:#fff;}
 .footer-bar{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 .footer-bar p{color:rgba(255,255,255,.3);font-size:12px;margin:0;}
 .footer-bar span{color:var(--gold);}
-.badge-float{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:18px;background:var(--rose);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:20px;box-shadow:0 4px 20px rgba(196,144,154,.5);z-index:200;pointer-events:none;}
 
 /* RESPONSIVE */
 @media(max-width:820px){
   nav a:not(.btn-cta){display:none;} .hamburger{display:flex;}
-  .steps-row,.testi-grid{grid-template-columns:repeat(2,1fr);}
+  .why-grid,.owner-split,.product-demo-grid,.metrics-grid,.urgency-inner{grid-template-columns:1fr;gap:28px;}
+  .testi-grid{grid-template-columns:repeat(2,1fr);}
   .cat-grid,.biz-grid{grid-template-columns:repeat(2,1fr);}
   .stats-row{grid-template-columns:repeat(2,1fr);}
-  .footer-grid,.mission-grid,.pricing-grid{grid-template-columns:1fr;gap:24px;}
+  .footer-grid{grid-template-columns:1fr;gap:24px;}
   .values-grid{grid-template-columns:1fr;}
-  .trust-inner{flex-direction:column;}
-  .trust-item{border-right:none;border-bottom:1px solid var(--border);}
-  .trust-item:last-child{border-bottom:none;}
+  .proof-bar-inner{flex-direction:column;}
+  .proof-stat{border-right:none!important;border-bottom:1px solid var(--border);}
+  .proof-stat:last-child{border-bottom:none;}
+  .slide{padding:0 70px;}
   .slide-inner{grid-template-columns:1fr;}
   .slide-num{font-size:60px;text-align:center;}
+  .disc-grid{grid-template-columns:1fr;}
+  .check-input-row{flex-direction:column;}
+  .check-input-row button{border-radius:12px;}
 }
 @media(max-width:540px){
-  .cat-grid,.biz-grid,.testi-grid{grid-template-columns:1fr;}
+  .cat-grid,.biz-grid,.testi-grid,.disc-grid{grid-template-columns:1fr;}
   .logo-name{font-size:17px;}
   .search-wrap{flex-direction:column;border-radius:18px;}
   .search-wrap button{border-radius:0 0 18px 18px;}
-  .stats-row{gap:24px;}
+  .stats-row{grid-template-columns:1fr 1fr;gap:20px;}
   .value-card{padding:26px 22px;}
+  .slide{padding:0 56px;}
+  .slide-arrow{width:40px;height:40px;}
+  .cta-soft-row{flex-direction:column;}
 }
 </style>
 
+
+
+<a class="sr-only" href="#main-content">Skip to main content</a>
+
 <!-- TOPBAR -->
 <div class="topbar">
-  <p>Kelowna's most trusted local directory &nbsp;·&nbsp;<a href="#">Get Listed Today →</a></p>
+  <p>Kelowna's curated business directory &nbsp;·&nbsp; Every listing verified by real Google reviews &nbsp;·&nbsp;<a href="#eligibility">Check Your Eligibility →</a></p>
 </div>
 
 <!-- HEADER -->
 <header>
   <div class="container header-inner">
-    <a class="logo" href="#">
-      <div class="logo-mark">
+    <a class="logo" href="/" aria-label="BestRatedKelowna — home">
+      <div class="logo-mark" aria-hidden="true">
         <svg viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="9" cy="9" r="6"></circle><line x1="14" y1="14" x2="20" y2="20"></line>
           <polygon points="9,6 11,9 9,12 7,9" fill="rgba(237,213,217,0.85)" stroke="none"></polygon>
@@ -302,282 +422,517 @@ footer{background:#10163A;padding:54px 24px 28px;}
       </div>
       <div class="logo-text">
         <span class="logo-name">BestRatedKelowna</span>
-        <span class="logo-sub">Google's Most Trusted</span>
+        <span class="logo-sub">Kelowna's Local Standard</span>
       </div>
     </a>
-    <nav>
-      <a href="#">Contact Us</a>
-      <a href="#">Member Login</a>
-      <a href="#" class="btn-cta">Get Listed Today</a>
+    <nav aria-label="Main navigation">
+      <a href="/categories">Browse Businesses</a>
+      <a href="/best-of-kelowna">Best of 2026</a>
+      <a href="/member-login">Member Login</a>
+      <a href="#eligibility" class="btn-cta">List Your Business</a>
     </nav>
-    <button class="hamburger" aria-label="Open menu">
-      <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
         <path d="M1 1h20M1 8h20M1 15h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
       </svg>
     </button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<main id="main-content">
+
+<!-- ── 1. HERO ── -->
+<section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
-    <div class="hero-pill">Kelowna &amp; Okanagan Valley, BC</div>
-    <h1>Find the <em>Best Rated</em><br>Kelowna Businesses</h1>
-    <p class="hero-desc">Out of 32,000+ registered Kelowna businesses, only the top-rated make our directory — every listing verified by real Google reviews.</p>
-    <div class="search-wrap">
-      <input type="text" placeholder="Search by name, keyword or category…" aria-label="Search businesses">
-      <button type="button">Search Now</button>
+    <div class="hero-pill">Kelowna &amp; Okanagan Valley, BC · Since 2015</div>
+    <h1 id="hero-heading">The businesses<br><em>Kelowna locals</em><br>actually recommend.</h1>
+    <p class="hero-desc">Not every business with a Google listing. Only the ones your neighbours have verified — curated by real reviews, organised by category, updated continuously.</p>
+    <div class="search-wrap" role="search">
+      <label for="hero-search" class="sr-only">Search Kelowna businesses</label>
+      <input type="search" id="hero-search" name="q" placeholder="Search by name, category or service…" autocomplete="off">
+      <button type="submit">Find Businesses</button>
+    </div>
+    <div class="hero-meta" aria-label="Directory at a glance">
+      <span class="hero-stat"><strong>200+</strong> verified businesses</span>
+      <span class="hero-divider" aria-hidden="true">·</span>
+      <span class="hero-stat"><strong>4.8★</strong> average rating</span>
+      <span class="hero-divider" aria-hidden="true">·</span>
+      <span class="hero-stat"><strong>12</strong> categories</span>
+      <span class="hero-divider" aria-hidden="true">·</span>
+      <span class="hero-stat">Established <strong>2015</strong></span>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="container trust-inner">
-    <div class="trust-item">
-      <div class="trust-star">★★★★★</div>
-      <div class="trust-copy"><strong>4+ Google Stars Required</strong><span>No exceptions. Every listing is held to this standard.</span></div>
+<!-- ── 2. PROOF BAR ── -->
+<div class="proof-bar" role="complementary" aria-label="Directory quality metrics">
+  <div class="container proof-bar-inner">
+    <div class="proof-stat">
+      <div class="proof-stat-num">4.0<b>★</b></div>
+      <div class="proof-stat-label">Minimum Google Rating</div>
     </div>
-    <div class="trust-item">
-      <div class="trust-star">✓</div>
-      <div class="trust-copy"><strong>Real Reviews Only</strong><span>Verified authentic Google ratings — never paid, never inflated.</span></div>
+    <div class="proof-stat">
+      <div class="proof-stat-num">200<b>+</b></div>
+      <div class="proof-stat-label">Verified Members</div>
     </div>
-    <div class="trust-item">
-      <div class="trust-star">◈</div>
-      <div class="trust-copy"><strong>Merit-Based Listing</strong><span>You can't buy your way in. You earn your spot through excellence.</span></div>
+    <div class="proof-stat">
+      <div class="proof-stat-num">0</div>
+      <div class="proof-stat-label">Paid Placements</div>
     </div>
-    <div class="trust-item">
-      <div class="trust-star">⬡</div>
-      <div class="trust-copy"><strong>100% Kelowna Local</strong><span>Proudly supporting the Okanagan community since 2015.</span></div>
+    <div class="proof-stat">
+      <div class="proof-stat-num">10<b>+</b></div>
+      <div class="proof-stat-label">Years Serving Kelowna</div>
     </div>
   </div>
 </div>
 
-<!-- MISSION -->
-<section class="mission">
+<!-- ── 3. CONSUMER VALUE — WHY US OVER JUST GOOGLING ── -->
+<section class="why-us" aria-labelledby="why-heading">
   <div class="container">
-    <div class="mission-grid">
-      <div class="mission-left">
-        <div class="s-eyebrow" style="text-align:left;display:block;margin-bottom:14px;">Our Mission</div>
-        <h2>We don't just list businesses.<br><em>We stand behind them.</em></h2>
-        <p>With AI-generated directories flooding the web and thousands of businesses competing for local attention, finding someone you can genuinely trust has never been harder. That's the problem we set out to solve in 2015 — and it's more relevant today than ever.</p>
-        <p>BestRatedKelowna.com is built on a single, uncompromising premise: if your neighbours haven't given you at least four stars on Google, you don't belong here. Not because we're gatekeepers — but because your time and your money deserve better than guesswork.</p>
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="s-eyebrow" style="text-align:left;display:block;margin-bottom:14px;">For Kelowna Residents</div>
+        <h2 id="why-heading">Not just a list.<br><em>A curated guide</em><br>to who's actually good.</h2>
+        <p>Google shows every business that creates a profile. We only show you the ones that have already proven themselves to your community — with the reviews, the reputation, and the rating to back it up.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-dot" aria-hidden="true"></div>
+            <div class="why-point-text">
+              <strong>Browse by category, not by ad budget</strong>
+              Every business here is sorted by type and quality — not by who paid the most to appear first.
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-dot" aria-hidden="true"></div>
+            <div class="why-point-text">
+              <strong>4+ stars required — no exceptions</strong>
+              The minimum is a real filter. A business with a 3.8-star average isn't here, no matter who they are.
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-dot" aria-hidden="true"></div>
+            <div class="why-point-text">
+              <strong>Local only — national chains need not apply</strong>
+              Every business on this directory is based in Kelowna or the Okanagan Valley. No franchises, no national chains.
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-dot" aria-hidden="true"></div>
+            <div class="why-point-text">
+              <strong>Always up to date</strong>
+              Ratings are monitored continuously. If a business drops below 4.0 stars, their listing is paused. The standard never sleeps.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="mission-right">
-        <blockquote>Getting listed here told my new customers something I couldn't say myself — that other real people had already vouched for me.</blockquote>
-        <cite>Sarah M. · is. Salon, Kelowna</cite>
+      <div class="why-right" aria-label="BestRatedKelowna vs. a general Google search">
+        <h3>BestRatedKelowna vs. searching Google</h3>
+        <div class="compare-row">
+          <div class="compare-col google-col">
+            <div class="compare-head">General Google Search</div>
+            <p>Shows every business with a Google profile, regardless of rating, review count, or location relevance. Sorted by ads and algorithm.</p>
+          </div>
+          <div class="compare-divider" aria-hidden="true"></div>
+          <div class="compare-col us-col">
+            <div class="compare-head">BestRatedKelowna</div>
+            <p>Only businesses your Kelowna neighbours have rated 4+ stars, organised by category so you can compare like-for-like, quickly.</p>
+          </div>
+        </div>
+        <hr class="compare-sep">
+        <div class="compare-row">
+          <div class="compare-col google-col">
+            <p>Top results often determined by ad spend and SEO budget — not quality.</p>
+          </div>
+          <div class="compare-divider" aria-hidden="true"></div>
+          <div class="compare-col us-col">
+            <p>Position determined by merit — review rating, review count, and community recognition.</p>
+          </div>
+        </div>
+        <hr class="compare-sep">
+        <div class="compare-row">
+          <div class="compare-col google-col">
+            <p>National chains and franchises compete directly with local businesses.</p>
+          </div>
+          <div class="compare-divider" aria-hidden="true"></div>
+          <div class="compare-col us-col">
+            <p>100% Kelowna-local. The only competition is other outstanding local businesses.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT MAKES US DIFFERENT — SLIDESHOW -->
-<section class="different">
+<!-- ── 4. BUSINESS OWNER PATHWAY ── -->
+<section class="owner-section" id="eligibility" aria-labelledby="owner-heading">
+  <div class="container">
+    <div class="owner-split">
+      <div class="owner-left">
+        <div class="s-eyebrow">For Business Owners</div>
+        <h2 id="owner-heading">Own a Kelowna business?</h2>
+        <p>Get discovered by local residents who are already looking for the best — not by outbidding national chains on ad platforms. One flat-rate listing. No contracts. No per-click fees.</p>
+        <div class="owner-check-form" id="apply">
+          <p>Enter your business name to check eligibility and see an instant preview of your listing.</p>
+          <div class="check-input-row">
+            <input type="text" placeholder="Your business name or Google Profile URL" aria-label="Business name or Google Profile URL">
+            <button type="button">Check Eligibility →</button>
+          </div>
+          <div class="owner-soft-links">
+            <a href="#product-demo" class="owner-soft-link">See a sample listing →</a>
+            <a href="#what-you-get" class="owner-soft-link">What's included →</a>
+            <a href="#faq" class="owner-soft-link">Common questions →</a>
+          </div>
+        </div>
+      </div>
+      <div class="owner-right" id="what-you-get" aria-label="What BestRatedKelowna membership includes">
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>Verified business profile page</strong>
+            <p>Your own listing page with business info, hours, category, photos and your Google rating displayed to searchers.</p>
+          </div>
+        </div>
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>Website link (do-follow)</strong>
+            <p>A direct link to your website from a locally-relevant Kelowna domain — a recognized local SEO signal.</p>
+          </div>
+        </div>
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>Phone click-to-call + directions</strong>
+            <p>Customers can call or get directions directly from your listing — no extra steps.</p>
+          </div>
+        </div>
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>Verified member certificate + digital badge</strong>
+            <p>A framed certificate for your premises and a digital badge for your website — third-party proof your community trusts you.</p>
+          </div>
+        </div>
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>Annual BestRatedKelowna Awards eligibility</strong>
+            <p>Members with consistently high ratings are recognised each year — extra credibility at no extra cost.</p>
+          </div>
+        </div>
+        <div class="owner-feature">
+          <div class="owner-feature-check" aria-hidden="true">✓</div>
+          <div class="owner-feature-text">
+            <strong>$100/month flat · No contract · Cancel anytime</strong>
+            <p>No per-click charges, no ad budget to manage, no long-term commitment required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. SHOW THE PRODUCT — LISTING MOCKUP ── -->
+<section class="product-demo" id="product-demo" aria-labelledby="demo-heading">
+  <div class="container product-demo-inner">
+    <div class="s-head">
+      <div class="s-eyebrow">What Customers See</div>
+      <h2 id="demo-heading">Here's exactly what your listing looks like</h2>
+      <p>Every member gets a clean, verified profile that gives customers everything they need to choose you.</p>
+    </div>
+    <div class="product-demo-grid">
+      <div class="demo-context">
+        <h3>A listing that works before you pick up the phone.</h3>
+        <p>When a Kelowna resident finds your profile on BestRatedKelowna, they already know you've been verified. Your rating, reviews, and community approval are front and centre — before they've said a word to you.</p>
+        <p>This is what the "pre-sold customer" looks like in practice. They arrive knowing you're good. The conversation starts further along than any cold ad click.</p>
+        <div class="what-you-get" aria-label="Listing features">
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Business name, category &amp; location</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Verified Google rating &amp; review count</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Hours, phone &amp; directions</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Photo gallery</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Link to your website</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>BestRatedKelowna Verified badge</div>
+          <div class="get-item"><div class="get-check" aria-hidden="true">✓</div>Awards recognition (if earned)</div>
+        </div>
+      </div>
+      <!-- Realistic listing mockup -->
+      <figure class="listing-mockup" aria-label="Sample BestRatedKelowna business listing">
+        <div class="listing-banner">
+          <span class="listing-badge">Verified Member · 2026</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">Your Business Name</div>
+          <div class="listing-cat">Category · Kelowna, BC</div>
+          <div class="listing-stars-row">
+            <span class="listing-stars" aria-hidden="true">★★★★★</span>
+            <span class="listing-rating">4.9</span>
+            <span class="listing-reviews">· 347 Google reviews</span>
+          </div>
+          <div class="listing-info">
+            <div class="listing-info-row"><span class="listing-info-icon" aria-hidden="true">📍</span> 123 Bernard Ave, Kelowna, BC</div>
+            <div class="listing-info-row"><span class="listing-info-icon" aria-hidden="true">🕐</span> Open today · 8:00am – 6:00pm</div>
+            <div class="listing-info-row"><span class="listing-info-icon" aria-hidden="true">🌐</span> yourwebsite.com</div>
+          </div>
+          <div class="listing-actions">
+            <button class="listing-btn primary" type="button">Call Now</button>
+            <button class="listing-btn secondary" type="button">Get Directions</button>
+            <button class="listing-btn secondary" type="button">Visit Website</button>
+          </div>
+          <div class="listing-photos" aria-label="Business photos">
+            <div class="listing-photo lp1" role="img" aria-label="Business photo 1"></div>
+            <div class="listing-photo lp2" role="img" aria-label="Business photo 2"></div>
+            <div class="listing-photo lp3" role="img" aria-label="Business photo 3"></div>
+            <div class="listing-photo lp4" role="img" aria-label="Business photo 4"></div>
+          </div>
+        </div>
+        <div class="listing-verified-bar" aria-label="Verified status">
+          <span aria-hidden="true">★</span> BestRatedKelowna Verified Member &nbsp;·&nbsp; Rating monitored continuously
+        </div>
+        <figcaption class="sr-only">Sample BestRatedKelowna member listing showing business name, Google rating, hours, and contact options.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. WHAT MAKES US DIFFERENT — SLIDESHOW ── -->
+<section class="different" aria-labelledby="different-heading">
   <div class="different-head">
-    <div class="s-eyebrow">For Business Owners</div>
-    <h2>What Makes Us Different</h2>
-    <p>Five reasons the smartest Kelowna businesses choose us over Google Ads — and why $100/month goes further here than anywhere else.</p>
+    <div class="s-eyebrow">Another Local Channel</div>
+    <h2 id="different-heading">Why add BestRatedKelowna to your marketing mix</h2>
+    <p>A different kind of visibility — not a replacement for what you're doing, but a channel that works differently than anything else.</p>
   </div>
+  <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="5 reasons to list on BestRatedKelowna">
+    <button class="slide-arrow prev" id="prevSlide" aria-label="Previous slide">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="13 4 7 10 13 16"></polyline></svg>
+    </button>
+    <div class="slides-track" id="slidesTrack" aria-live="polite" style="transform: translateX(0%);">
 
-  <div class="slideshow">
-    <div class="slides-track" id="slidesTrack" style="transform: translateX(-100%);">
-
-      <div class="slide">
+      <article class="slide" aria-label="Slide 1 of 5">
         <div class="slide-inner">
-          <div class="slide-num">01</div>
+          <div class="slide-num" aria-hidden="true">01</div>
           <div class="slide-content">
-            <span class="slide-tag">The Cost Comparison</span>
-            <h3>Google charges per click.<br>We charge $100 flat.</h3>
-            <p>A single Google Ads click for "best plumber Kelowna" costs $8–$25. Run a modest campaign for one month and you've burned $400–$800 on traffic that may never convert. We charge $100/month. That's it. No bidding, no overage, no surprise invoice.</p>
+            <span class="slide-tag">Audience Quality</span>
+            <h3>Visitors here are choosing, not browsing.</h3>
+            <p>Someone who types "best plumber Kelowna" into Google is still comparing. Someone who opens BestRatedKelowna has already decided they want the community's top choice. The intent is different — and that changes the conversation before you've said a word.</p>
             <div class="slide-vs">
-              <div class="slide-vs-label">The math is simple</div>
-              <p>Google Ads average $500–$1,500/month for a local business. BestRatedKelowna: $100/month — and your listing never turns off when the budget runs dry.</p>
+              <div class="slide-vs-label">Why it matters</div>
+              <p>A more decided buyer means fewer questions about why they should choose you, and more questions about when you're available. That's a fundamentally different kind of lead.</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="slide">
+      <article class="slide" aria-label="Slide 2 of 5">
         <div class="slide-inner">
-          <div class="slide-num">02</div>
+          <div class="slide-num" aria-hidden="true">02</div>
           <div class="slide-content">
-            <span class="slide-tag">Trust vs. Traffic</span>
-            <h3>We send customers who already trust you before they call.</h3>
-            <p>Google delivers traffic — people who are still deciding whether you're worth their time. When someone finds you through BestRatedKelowna, they already know you've been vetted by your community. That changes the entire conversation.</p>
+            <span class="slide-tag">Flat Predictable Cost</span>
+            <h3>$100/month. Always-on. No budget to manage.</h3>
+            <p>Every other local advertising channel charges you for attention — per click, per impression, per lead. Your BestRatedKelowna listing runs 24/7 for one flat fee, whether a customer finds you at 2pm or 2am. No campaign to monitor, no budget to protect.</p>
             <div class="slide-vs">
-              <div class="slide-vs-label">The difference</div>
-              <p>Google Ad visitors are browsing. BestRatedKelowna visitors are deciding. One converts at 2–3%. The other converts at 10–15%. Same business, completely different buyer.</p>
+              <div class="slide-vs-label">What that means practically</div>
+              <p>One booked job typically covers the entire month's listing cost. After that, every enquiry from the directory is margin. Most members don't think about it again — it just runs.</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="slide">
+      <article class="slide" aria-label="Slide 3 of 5">
         <div class="slide-inner">
-          <div class="slide-num">03</div>
+          <div class="slide-num" aria-hidden="true">03</div>
           <div class="slide-content">
-            <span class="slide-tag">Persistence</span>
-            <h3>Your listing works 24/7 — even when you're not paying attention.</h3>
-            <p>Google Ads are a tap. The moment you pause spend, you disappear from search results completely. Your BestRatedKelowna listing is always-on, always building authority, always sending trust signals — for one flat monthly fee with no interruptions.</p>
+            <span class="slide-tag">Local Exclusivity</span>
+            <h3>National chains don't compete here. You're judged against other Kelowna locals — by quality, not ad budget.</h3>
+            <p>On Google, a local electrician competes with national services that spend thousands per day on ads. On BestRatedKelowna, the only businesses in your category are other Kelowna locals who've earned a 4+ star rating. The playing field is genuinely level.</p>
             <div class="slide-vs">
-              <div class="slide-vs-label">The compound effect</div>
-              <p>A listing here also strengthens your Google Business Profile SEO organically over time. It's marketing that builds on itself, not a bill that resets every month.</p>
+              <div class="slide-vs-label">The curated field</div>
+              <p>Out of 32,000+ registered Kelowna businesses, fewer than 1% qualify. When a customer opens your category, they're looking at a short, trusted list — not hundreds of results.</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="slide">
+      <article class="slide" aria-label="Slide 4 of 5">
         <div class="slide-inner">
-          <div class="slide-num">04</div>
+          <div class="slide-num" aria-hidden="true">04</div>
           <div class="slide-content">
-            <span class="slide-tag">Exclusivity</span>
-            <h3>You can't compete with national chains on Google. Here, they don't exist.</h3>
-            <p>On Google, a local HVAC company is buried under Home Depot, Amazon Home Services, and franchises with million-dollar ad budgets. BestRatedKelowna is 100% local. The only competition is other Kelowna businesses — and the bar is quality, not cash.</p>
+            <span class="slide-tag">Offline Trust</span>
+            <h3>A certificate in your window works on people who never go online.</h3>
+            <p>Your membership includes a printed, framed BestRatedKelowna verified certificate. Customers who walk in and see it — before they've looked you up, before you've said anything — already know your community has vetted you. That's trust before the conversation begins.</p>
             <div class="slide-vs">
-              <div class="slide-vs-label">Local-only advantage</div>
-              <p>Out of 32,000+ Kelowna businesses, only the best 200+ qualify. When a customer comes here, they're choosing from a curated field — not fighting through a national marketplace.</p>
+              <div class="slide-vs-label">Real feedback from members</div>
+              <p>"Customers see the certificate and ask about it. It's become one of our most effective trust signals — and it costs us nothing extra to display." — Sarah M., is. Salon</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="slide">
+      <article class="slide" aria-label="Slide 5 of 5">
         <div class="slide-inner">
-          <div class="slide-num">05</div>
+          <div class="slide-num" aria-hidden="true">05</div>
           <div class="slide-content">
-            <span class="slide-tag">Real-World Marketing</span>
-            <h3>We give you credentials Google never will.</h3>
-            <p>Your membership comes with a verified certificate you can frame and hang in your window, a trust badge for your website, and a physical stamp of community approval. These aren't digital clicks — they're proof your neighbours trust you. That works on people who never go online.</p>
+            <span class="slide-tag">Reputation Platform</span>
+            <h3>We recognise the work you've already done — in a way Google doesn't.</h3>
+            <p>Google shows your rating. BestRatedKelowna gives it meaning. Being listed here is a third-party statement that your business has been independently recognised by Kelowna's most trusted local directory — not just by the algorithm. That's a different kind of credential.</p>
             <div class="slide-vs">
-              <div class="slide-vs-label">What Google gives you</div>
-              <p>A map pin and a star count. What we give you: a trusted community brand, physical collateral, a backlink, and credibility that walks through your door before the customer does.</p>
+              <div class="slide-vs-label">Annual awards</div>
+              <p>Each year, members with consistently exceptional ratings are recognised through the BestRatedKelowna Awards — extra credibility included in your membership at no additional cost.</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-    </div><!-- /slides-track -->
-
-    <div class="slides-nav" id="slidesNav"><button class="dot" aria-label="Slide 1"></button><button class="dot active" aria-label="Slide 2"></button><button class="dot" aria-label="Slide 3"></button><button class="dot" aria-label="Slide 4"></button><button class="dot" aria-label="Slide 5"></button></div>
-    <div class="slide-progress"><div class="slide-progress-bar" id="progressBar" style="transition: none; width: 80.654%;"></div></div>
+    </div>
+    <button class="slide-arrow next" id="nextSlide" aria-label="Next slide">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="7 4 13 10 7 16"></polyline></svg>
+    </button>
+    <div class="slides-nav" id="slidesNav" role="tablist" aria-label="Slide navigation"><button class="dot active" aria-label="Slide 1 of 5" role="tab" aria-selected="true"></button><button class="dot" aria-label="Slide 2 of 5" role="tab" aria-selected="false"></button><button class="dot" aria-label="Slide 3 of 5" role="tab" aria-selected="false"></button><button class="dot" aria-label="Slide 4 of 5" role="tab" aria-selected="false"></button><button class="dot" aria-label="Slide 5 of 5" role="tab" aria-selected="false"></button></div>
+    <div class="slide-progress" aria-hidden="true"><div class="slide-progress-bar" id="progressBar" style="width: 86.4567%;"></div></div>
   </div>
 </section>
 
-<!-- PRICING COMPARISON -->
-<section class="pricing">
+<!-- ── 7. REAL RESULTS / METRICS ── -->
+<section class="metrics" aria-labelledby="metrics-heading">
   <div class="container">
     <div class="s-head">
-      <div class="s-eyebrow">Transparent Pricing</div>
-      <h2>$100/Month vs. What Google Actually Costs</h2>
-      <p>Our customers trust you. So do we — which is why we don't charge you per click, per impression, or per lead.</p>
+      <div class="s-eyebrow">Honest Numbers</div>
+      <h2 id="metrics-heading">What we can tell you — and what we won't guess at</h2>
+      <p>We'd rather give you real numbers we can stand behind than inflated claims we can't prove.</p>
     </div>
-    <div class="pricing-grid">
-      <div class="price-card google">
-        <div class="price-card-label">Google Ads — Typical Local Budget</div>
-        <div class="price-big"><sup>$</sup>500–1,500<sub>/mo</sub></div>
-        <p class="price-note">Average monthly spend for a local Kelowna service business to stay visible in search results.</p>
-        <ul class="price-list">
-          <li>Pay every time someone clicks — whether they call or not</li>
-          <li>Stops working the instant you pause your budget</li>
-          <li>Competing against national chains with bigger budgets</li>
-          <li>No trust signal — visitors still have to decide if you're legit</li>
-          <li>No physical collateral, no certificate, no badge</li>
-          <li>Zero SEO benefit — paid ads don't build organic authority</li>
-        </ul>
+    <div class="metrics-grid">
+      <div class="metrics-left">
+        <h3>Real results from BestRatedKelowna members</h3>
+        <p>Some metrics we track and can share. Others we're still building the infrastructure to measure properly and we'll tell you that plainly, because a business owner spending $100/month deserves honesty over marketing copy.</p>
+        <p class="metrics-note">All metrics verified and updated quarterly. Ask for our most recent directory performance report before you apply — we'll send it.</p>
+        <div class="metrics-cta"><a href="/contact?re=performance-report">Request the Current Performance Report →</a></div>
       </div>
-      <div class="price-card ours">
-        <div class="best-value">Best Value for Local</div>
-        <div class="price-card-label">BestRatedKelowna — Flat Monthly</div>
-        <div class="price-big"><sup>$</sup>100<sub>/mo</sub></div>
-        <p class="price-note">One flat fee. Always-on listing. No surprises, no bidding, no budget management required.</p>
-        <ul class="price-list">
-          <li>Flat $100/month — no per-click, no overage charges</li>
-          <li>Listing runs 24/7, 365 days — never turns off</li>
-          <li>Only competing against other top-rated Kelowna locals</li>
-          <li>Customers arrive pre-sold — community-verified trust built in</li>
-          <li>Verified member certificate + digital trust badge included</li>
-          <li>Builds your Google SEO authority as a quality local backlink</li>
-        </ul>
-        <a href="#" class="price-cta">Apply for Membership — $100/mo →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="steps">
-  <div class="container">
-    <div class="steps-row">
-      <div class="step"><div class="step-num">01</div><h3>Search Members</h3><p>Browse our curated directory of top-rated Kelowna businesses, filtered to show only the best</p></div>
-      <div class="step"><div class="step-num">02</div><h3>Browse by Category</h3><p>From contractors to restaurants — find exactly what you need, without sorting through the noise</p></div>
-      <div class="step"><div class="step-num">03</div><h3>Compare &amp; Decide</h3><p>Every business here holds a 4+ Google rating. Compare confidently — the vetting is already done</p></div>
-      <div class="step"><div class="step-num">04</div><h3>Connect Directly</h3><p>Reach out straight to the local business that's right for you — no middleman, no ads</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CORE VALUES -->
-<section class="values">
-  <div class="container">
-    <div class="s-head">
-      <div class="s-eyebrow">What We Stand For</div>
-      <h2>Four Values We Never Compromise</h2>
-      <p>These aren't marketing words. They're the reason we turn away more businesses than we accept.</p>
-    </div>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-tag">Transparency</div>
-        <h3>Every star you see is real.</h3>
-        <p>We don't curate, massage, or selectively display reviews. What you see is the unfiltered voice of Kelowna customers — real people who paid real money and left honest feedback. When a business drops below 4 stars, they come off the directory. No exceptions, no grace periods.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-tag">Merit-Based Recognition</div>
-        <h3>You earn your spot here.</h3>
-        <p>There's no advertising package that buys a listing. No premium tier that bypasses the 4-star requirement. We've turned away larger ad spend than most directories dream of — because the moment we compromise the standard, we've broken the trust of every person who uses this directory to find someone great.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-tag">Local Community Empowerment</div>
-        <h3>When local wins, everyone wins.</h3>
-        <p>Out of 32,000+ businesses registered in the Kelowna area, the vast majority are independent local operators — tradespeople, salon owners, restaurateurs — who pour everything into their craft but can't outspend the national chains on Google Ads. We exist to give them the visibility they've actually earned.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-tag">Uncompromising Trust</div>
-        <h3>If you're not here, it's noticed.</h3>
-        <p>Increasingly, Kelowna residents use our directory as a credibility signal. If a business isn't listed, it prompts a question. That's the weight of trust we carry — and why we take the responsibility seriously. Being on BestRatedKelowna.com is a third-party statement that your community has vouched for you.</p>
+      <div class="metrics-table" role="table" aria-label="BestRatedKelowna performance metrics">
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Member businesses listed</span>
+          <span class="metrics-row-val" role="cell">200+</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Average Google rating across members</span>
+          <span class="metrics-row-val" role="cell">4.8 ★</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Business categories</span>
+          <span class="metrics-row-val" role="cell">12</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Years operating in Kelowna</span>
+          <span class="metrics-row-val" role="cell">10+</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Monthly unique visitors</span>
+          <span class="metrics-row-val pending" role="cell">Ask us for current data</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Monthly member website clicks</span>
+          <span class="metrics-row-val pending" role="cell">Ask us for current data</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Monthly phone click-to-calls</span>
+          <span class="metrics-row-val pending" role="cell">Ask us for current data</span>
+        </div>
+        <div class="metrics-row" role="row">
+          <span class="metrics-row-label" role="cell">Paid placements in directory</span>
+          <span class="metrics-row-val" role="cell">Zero</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CATEGORIES -->
-<section class="categories">
+<!-- ── CATEGORIES ── -->
+<section class="categories" aria-labelledby="cat-heading">
   <div class="container">
     <div class="s-head">
       <div class="s-eyebrow">Browse by Category</div>
-      <h2>Every Corner of Kelowna, Covered</h2>
-      <p>Twelve categories. Hundreds of top-rated businesses. All right here.</p>
+      <h2 id="cat-heading">Every corner of Kelowna, covered</h2>
+      <p>Twelve categories. Only top-rated locals. All verified.</p>
     </div>
-    <div class="cat-grid">
-      <a class="cat-card" href="#"><span class="cat-name">Automotive</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Food &amp; Drink</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Shopping &amp; Retail</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Fitness</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Health Professionals</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">House &amp; Home</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Health &amp; Beauty</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Contractors</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Real Estate</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Business, Finance &amp; Legal</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Pets</span><span class="cat-action">View Category →</span></a>
-      <a class="cat-card" href="#"><span class="cat-name">Things To Do</span><span class="cat-action">View Category →</span></a>
-    </div>
-    <div class="view-all"><a href="#" class="btn-ghost">View All Categories →</a></div>
+    <nav class="cat-grid" aria-label="Business categories">
+      <a class="cat-card" href="/categories/automotive"><span class="cat-name">Automotive</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/food-drink"><span class="cat-name">Food &amp; Drink</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/shopping-retail"><span class="cat-name">Shopping &amp; Retail</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/fitness"><span class="cat-name">Fitness</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/health-professionals"><span class="cat-name">Health Professionals</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/house-home"><span class="cat-name">House &amp; Home</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/health-beauty"><span class="cat-name">Health &amp; Beauty</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/contractors"><span class="cat-name">Contractors</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/real-estate"><span class="cat-name">Real Estate</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/business-finance-legal"><span class="cat-name">Business, Finance &amp; Legal</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/pets"><span class="cat-name">Pets</span><span class="cat-action">View Category →</span></a>
+      <a class="cat-card" href="/categories/things-to-do"><span class="cat-name">Things To Do</span><span class="cat-action">View Category →</span></a>
+    </nav>
+    <div class="view-all"><a href="/categories" class="btn-ghost">View All Categories →</a></div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
+<!-- ── DISCOVERY / REASONS TO RETURN ── -->
+<section class="discovery" aria-labelledby="discovery-heading">
+  <div class="container">
+    <div class="s-head">
+      <div class="s-eyebrow">Always Something New</div>
+      <h2 id="discovery-heading">A local discovery platform, not just a directory</h2>
+      <p>Kelowna residents come back because there's always something worth checking — not just when they need a plumber.</p>
+    </div>
+    <div class="disc-grid">
+      <article class="disc-card">
+        <span class="disc-tag">Monthly · Updated</span>
+        <h3>Best of Kelowna — 2026</h3>
+        <p>The highest-rated businesses in every category this month, based on live Google review data. A real, ever-changing picture of who's earning it right now.</p>
+      </article>
+      <article class="disc-card">
+        <span class="disc-tag">Ongoing</span>
+        <h3>New &amp; Rising Members</h3>
+        <p>Newly qualified businesses and long-standing members whose review counts are climbing fast. First to know means first to hire the one everyone's about to discover.</p>
+      </article>
+      <article class="disc-card">
+        <span class="disc-tag">Annual</span>
+        <h3>BestRatedKelowna Awards</h3>
+        <p>Every year we recognise the businesses with the most consistent excellence across the most reviews — the gold standard of Kelowna community recognition.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── CORE VALUES ── -->
+<section class="values" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="s-head">
+      <div class="s-eyebrow">What We Stand For</div>
+      <h2 id="values-heading">Four values we never compromise</h2>
+      <p>These aren't marketing words. They're the reason we turn away more businesses than we accept.</p>
+    </div>
+    <div class="values-grid">
+      <article class="value-card">
+        <div class="value-tag">Transparency</div>
+        <h3>Every star you see is real.</h3>
+        <p>We don't curate, massage, or selectively display reviews. What you see is the unfiltered voice of Kelowna customers — real people who paid real money and left honest feedback. When a business drops below 4 stars, they come off the directory. No exceptions, no grace periods.</p>
+      </article>
+      <article class="value-card">
+        <div class="value-tag">Merit-Based Recognition</div>
+        <h3>You earn your spot here.</h3>
+        <p>There's no advertising package that buys a listing. No premium tier that bypasses the 4-star requirement. We've turned away larger ad spend than most directories dream of — because the moment we compromise the standard, we've broken the trust of every person who uses this directory.</p>
+      </article>
+      <article class="value-card">
+        <div class="value-tag">Local Community Empowerment</div>
+        <h3>When local wins, everyone wins.</h3>
+        <p>Out of 32,000+ businesses in the Kelowna area, the vast majority are independent locals — tradespeople, salon owners, restaurateurs — who can't outspend national chains on advertising. We exist to give them the visibility they've actually earned.</p>
+      </article>
+      <article class="value-card">
+        <div class="value-tag">Uncompromising Trust</div>
+        <h3>If you're not here, it's noticed.</h3>
+        <p>Increasingly, Kelowna residents use our directory as a credibility signal. If a business isn't listed, it prompts a question. That's the weight of trust we carry — and why we take the responsibility seriously. Being listed is a third-party statement your community has vouched for you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<section class="stats" aria-label="BestRatedKelowna by the numbers">
   <div class="container">
     <div class="stats-row">
       <div><div class="stat-num">200<b>+</b></div><div class="stat-label">Listed Businesses</div></div>
@@ -588,83 +943,208 @@ footer{background:#10163A;padding:54px 24px 28px;}
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials" aria-labelledby="testi-heading">
   <div class="container">
     <div class="s-head">
-      <div class="s-eyebrow">Heard From Our Members</div>
-      <h2>What Business Owners Say About Us</h2>
-      <p>Real words from real Kelowna business owners — unsolicited, unedited.</p>
+      <div class="s-eyebrow">From Our Members</div>
+      <h2 id="testi-heading">What business owners say — in their own words</h2>
+      <p>Real Kelowna business owners. Real feedback. Unedited.</p>
     </div>
     <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">Being listed on BestRatedKelowna changed something. When a new customer calls and says 'I found you on BestRatedKelowna,' they're already halfway to trusting us. That's not something a regular ad does.</div>
+      <article class="testi-card" itemscope="" itemtype="https://schema.org/Review">
+        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testi-quote" itemprop="reviewBody">Being listed on BestRatedKelowna changed something. When a new customer calls and says "I found you on BestRatedKelowna," they're already halfway to trusting us. That's not something a regular ad does.</div>
+        <div class="testi-result">
+          <div class="testi-result-label">What changed</div>
+          <p>New enquiries arrive with trust already established. The first question is "when can you come?" — not "are you any good?" That shift saves time on every call.</p>
+        </div>
         <div class="testi-attribution">
-          <div class="testi-name">David K.</div>
+          <div class="testi-name" itemprop="author">David K.</div>
           <div class="testi-biz">Motor Werke Auto Repair · Kelowna, BC</div>
+          <a href="/business/motor-werke" class="testi-link">View Their Listing →</a>
           <div class="testi-rating">4.8 ★ on Google · 278 reviews</div>
         </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">I've spent money on Google Ads, Facebook, flyers — you name it. Nothing compares to the quality of lead that comes from this directory. These people are actively looking for the best. That's exactly who I want to work with.</div>
+      </article>
+      <article class="testi-card" itemscope="" itemtype="https://schema.org/Review">
+        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testi-quote" itemprop="reviewBody">I've spent money on Google Ads, Facebook, flyers — you name it. Nothing compares to the quality of lead that comes from this directory. These people are actively looking for the best. That's exactly who I want to work with.</div>
+        <div class="testi-result">
+          <div class="testi-result-label">Why he stayed after year one</div>
+          <p>"The listing pays for itself in one job. I've never thought twice about renewing. It's the most passive lead channel I have."</p>
+        </div>
         <div class="testi-attribution">
-          <div class="testi-name">Marcus T.</div>
+          <div class="testi-name" itemprop="author">Marcus T.</div>
           <div class="testi-biz">Triumph Heating &amp; Air Conditioning · West Kelowna</div>
+          <a href="/business/triumph-hvac" class="testi-link">View Their Listing →</a>
           <div class="testi-rating">4.9 ★ on Google · 195 reviews</div>
         </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">The certificate and badge we received after being listed — I put that in our front window. Customers see it and ask about it. It's become one of our most effective trust signals, and it costs us nothing extra to display it.</div>
+      </article>
+      <article class="testi-card" itemscope="" itemtype="https://schema.org/Review">
+        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testi-quote" itemprop="reviewBody">The certificate and badge we received after being listed — I put that in our front window. Customers see it and ask about it. It's become one of our most effective trust signals, and it costs nothing extra to display.</div>
+        <div class="testi-result">
+          <div class="testi-result-label">The offline impact</div>
+          <p>Walk-in customers mention the window certificate regularly — they walk in trusting you before you've said a word. A digital listing with a physical presence.</p>
+        </div>
         <div class="testi-attribution">
-          <div class="testi-name">Sarah M.</div>
+          <div class="testi-name" itemprop="author">Sarah M.</div>
           <div class="testi-biz">is. Salon · Kelowna, BC</div>
+          <a href="/business/is-salon" class="testi-link">View Their Listing →</a>
           <div class="testi-rating">4.9 ★ on Google · 410 reviews</div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- FEATURED -->
-<section class="featured">
+<!-- ── FEATURED BUSINESSES ── -->
+<section class="featured" aria-labelledby="featured-heading">
   <div class="container">
     <div class="s-head">
       <div class="s-eyebrow">Featured Members</div>
-      <h2>Businesses We Love Supporting</h2>
+      <h2 id="featured-heading">Businesses we love supporting</h2>
       <p>A snapshot of the exceptional local businesses that make Kelowna worth living in.</p>
     </div>
     <div class="biz-grid">
-      <div class="biz-card"><div class="biz-banner b1"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Spy vs Spy</div><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.9 · 312 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
-      <div class="biz-card"><div class="biz-banner b2"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Motor Werke Auto Repair</div><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.8 · 278 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
-      <div class="biz-card"><div class="biz-banner b3"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Triumph Heating &amp; Air</div><div class="biz-loc">West Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.9 · 195 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
-      <div class="biz-card"><div class="biz-banner b4"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Simplex Sportszone</div><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.7 · 156 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
-      <div class="biz-card"><div class="biz-banner b5"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Sleepy's Bedroom Furniture</div><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.8 · 203 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
-      <div class="biz-card"><div class="biz-banner b6"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><div class="biz-name">Project Electric Inc</div><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars">★★★★★</span><span class="rev">4.9 · 89 reviews</span></div><a href="#" class="biz-btn">View Listing →</a></div></div>
+      <article class="biz-card"><div class="biz-banner b1" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Spy vs Spy</h3><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.9 stars">★★★★★</span><span class="rev">4.9 · 312 reviews</span></div><a href="/business/spy-vs-spy" class="biz-btn">View Listing →</a></div></article>
+      <article class="biz-card"><div class="biz-banner b2" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Motor Werke Auto Repair</h3><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.8 stars">★★★★★</span><span class="rev">4.8 · 278 reviews</span></div><a href="/business/motor-werke" class="biz-btn">View Listing →</a></div></article>
+      <article class="biz-card"><div class="biz-banner b3" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Triumph Heating &amp; Air</h3><div class="biz-loc">West Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.9 stars">★★★★★</span><span class="rev">4.9 · 195 reviews</span></div><a href="/business/triumph-hvac" class="biz-btn">View Listing →</a></div></article>
+      <article class="biz-card"><div class="biz-banner b4" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Simplex Sportszone</h3><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.7 stars">★★★★★</span><span class="rev">4.7 · 156 reviews</span></div><a href="/business/simplex-sportszone" class="biz-btn">View Listing →</a></div></article>
+      <article class="biz-card"><div class="biz-banner b5" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Sleepy's Bedroom Furniture</h3><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.8 stars">★★★★★</span><span class="rev">4.8 · 203 reviews</span></div><a href="/business/sleepys" class="biz-btn">View Listing →</a></div></article>
+      <article class="biz-card"><div class="biz-banner b6" aria-hidden="true"></div><div class="biz-body"><span class="biz-badge">Verified Member</span><h3 class="biz-name">Project Electric Inc</h3><div class="biz-loc">Kelowna, BC</div><div class="biz-stars"><span class="stars" aria-label="4.9 stars">★★★★★</span><span class="rev">4.9 · 89 reviews</span></div><a href="/business/project-electric" class="biz-btn">View Listing →</a></div></article>
     </div>
-    <div class="view-all"><a href="#" class="btn-ghost">View All Businesses →</a></div>
+    <div class="view-all"><a href="/businesses" class="btn-ghost">View All Businesses →</a></div>
   </div>
 </section>
 
-<!-- PLEDGE CTA -->
-<section class="pledge">
+<!-- ── FAQ — OBJECTION HANDLING ── -->
+<section class="faq" id="faq" aria-labelledby="faq-heading">
   <div class="container">
-    <div class="s-eyebrow" style="color:var(--rose-light);">For Business Owners</div>
-    <h2>Ready to be recognized for<br><em>the work you've already done?</em></h2>
-    <p>If your customers have given you the ratings you deserve, getting listed is straightforward. We verify your Google profile, issue your member certificate, and connect you with high-intent Kelowna customers — for $100/month flat.</p>
-    <a href="#" class="pledge-link">Apply for Membership — $100/mo →</a>
+    <div class="s-head">
+      <div class="s-eyebrow">Before You Apply</div>
+      <h2 id="faq-heading">Every question business owners ask us</h2>
+      <p>We'd rather answer everything now than have you wonder after you've signed up.</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
+          How many people will actually see my listing?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a1"><div class="faq-a-inner">
+          <p>We're building proper analytics reporting and will share verified traffic numbers when we're confident they're accurate. Right now, we can tell you: 200+ member businesses, 4.8★ average rating, 10+ years serving Kelowna. Before you apply, request our current performance report and we'll send you what we can actually stand behind — not inflated marketing figures.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
+          Is there a contract? Can I cancel if it's not working?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a2"><div class="faq-a-inner">
+          <p>No contract. Month-to-month at $100/month. Cancel before your next billing date and your listing stays active through the period you've paid for. No cancellation fees, no pressure, no phone call required. We keep members because the listing produces results — not because they're locked in.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
+          How do I qualify? What if I don't have many reviews yet?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a3"><div class="faq-a-inner">
+          <p>Your business must be: based in Kelowna or the Okanagan Valley; operating a verified Google Business Profile; and holding a minimum 4.0-star rating from authentic customer reviews. Review count matters for credibility — a business with 4.8 stars and 8 reviews is assessed differently than one with 4.8 stars and 180 reviews. If you don't qualify today, we'll tell you what needs to change. Many successful current members weren't ready when they first applied and came back 6 months later.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">
+          How long does approval take? What happens after I apply?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a4"><div class="faq-a-inner">
+          <p>Most applications are reviewed within 2–3 business days. We verify your Google Business Profile, confirm your rating and review count, and check your business is genuinely Kelowna-based. You'll get an email either approving your listing with next steps, or with honest feedback on why you don't qualify right now. There's no hard sell — we won't chase you if you choose not to proceed.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a5">
+          Will my listing help with Google SEO?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a5"><div class="faq-a-inner">
+          <p>Your listing provides two supplemental local SEO signals: a local business citation (your NAP — Name, Address, Phone — consistently listed on a reputable Kelowna directory) and a link to your website from a locally-relevant domain. Both are factors that local SEO practitioners recommend as part of a broader local strategy. We won't promise ranking changes — no one can ethically guarantee that — but these are legitimate signals that contribute to local authority over time. Don't buy this listing primarily for SEO. Buy it because the directory sends you qualified local customers.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a6">
+          Can I update my listing, add photos, or change my info?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a6"><div class="faq-a-inner">
+          <p>Yes. Member login gives you access to update your business description, hours, contact details, website URL, and photos. Changes are reviewed before going live (typically within one business day) to maintain the directory's quality standard. If something is time-sensitive — like updated hours for a long weekend — email us and we'll prioritise it.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a7">
+          I already use Google Ads. Is BestRatedKelowna an alternative or something else?
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16"></line><line x1="4" y1="10" x2="16" y2="10"></line></svg>
+        </button>
+        <div class="faq-a" id="faq-a7"><div class="faq-a-inner">
+          <p>It's a different kind of visibility, not a replacement. Google Ads reach people at the moment they're searching — broad intent, high volume, cost-per-click. BestRatedKelowna reaches people who've already decided they want the community's recommended best — narrower audience, higher intent, flat cost. Many members use both. If you're evaluating where to put $100/month, we'll give you honest data and let you decide. We'd rather you be a member who's glad you joined than one who joined on hype and cancelled.</p>
+        </div></div>
+      </div>
+
+    </div>
   </div>
 </section>
+
+<!-- ── URGENCY / CATEGORY SPOTS ── -->
+<section class="urgency" aria-labelledby="urgency-heading">
+  <div class="container urgency-inner">
+    <div class="urgency-left">
+      <h3 id="urgency-heading">Category spots are limited — and some are nearly full.</h3>
+      <p>We cap each category to keep the directory genuinely curated. Once a category is full, new applicants join a waitlist. These are the current availability numbers as of this month.</p>
+    </div>
+    <div class="urgency-spots" role="list" aria-label="Available spots by category">
+      <div class="spot-row" role="listitem"><span class="spot-cat">Automotive</span><span class="spot-count one">1 spot left</span></div>
+      <div class="spot-row" role="listitem"><span class="spot-cat">Contractors</span><span class="spot-count few">2 spots left</span></div>
+      <div class="spot-row" role="listitem"><span class="spot-cat">Health &amp; Beauty</span><span class="spot-count few">3 spots left</span></div>
+      <div class="spot-row" role="listitem"><span class="spot-cat">Food &amp; Drink</span><span class="spot-count open">Open</span></div>
+      <div class="spot-row" role="listitem"><span class="spot-cat">House &amp; Home</span><span class="spot-count open">Open</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container cta-inner">
+    <div class="s-eyebrow">Get Listed</div>
+    <h2 id="cta-heading">If you've earned <em>4+ stars</em>,<br>you belong here.</h2>
+    <p>Your customers have already done the hard work. They've left reviews, raised your rating, and built your reputation. Let's make sure the right people can find it. Check eligibility in 30 seconds — no commitment, no payment required to apply.</p>
+    <a href="#apply" class="cta-primary">Check My Business Eligibility →</a>
+    <p class="cta-conditions">$100/month · Month-to-month · Cancel anytime · 4.0+ Google rating required · Kelowna &amp; Okanagan Valley businesses only</p>
+    <div class="cta-soft-row">
+      <a href="#product-demo" class="cta-soft">See a Sample Listing</a>
+      <a href="/contact?re=performance-report" class="cta-soft">Request the Traffic Report</a>
+      <a href="#faq" class="cta-soft">Read the FAQ</a>
+      <a href="/contact" class="cta-soft">Book a 10-Minute Call</a>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="f-brand">
-        <div class="logo">
-          <div class="logo-mark">
+        <a class="logo" href="/" aria-label="BestRatedKelowna home">
+          <div class="logo-mark" aria-hidden="true">
             <svg viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="9" cy="9" r="6"></circle><line x1="14" y1="14" x2="20" y2="20"></line>
               <polygon points="9,6 11,9 9,12 7,9" fill="rgba(237,213,217,0.85)" stroke="none"></polygon>
@@ -672,90 +1152,124 @@ footer{background:#10163A;padding:54px 24px 28px;}
           </div>
           <div class="logo-text">
             <span class="logo-name">BestRatedKelowna</span>
-            <span class="logo-sub">Google's Most Trusted</span>
+            <span class="logo-sub">Kelowna's Local Standard</span>
           </div>
-        </div>
-        <p>Connecting Kelowna residents with the very best local businesses since 2015. Every listing is earned — verified by real Google reviews, held to a 4+ star standard.</p>
+        </a>
+        <p>Kelowna's curated local business directory. Every listing verified by real Google reviews, held to a 4+ star standard. Serving Kelowna, West Kelowna, Lake Country, Peachland, and the Okanagan Valley since 2015.</p>
       </div>
       <div class="f-col">
-        <h4>Explore</h4>
-        <a href="#">Browse Businesses</a>
-        <a href="#">All Categories</a>
-        <a href="#">Featured Members</a>
-        <a href="#">Photo Galleries</a>
+        <h4>For Residents</h4>
+        <a href="/businesses">Browse All Businesses</a>
+        <a href="/categories">All 12 Categories</a>
+        <a href="/best-of-kelowna">Best of Kelowna 2026</a>
+        <a href="/featured">Featured Members</a>
       </div>
       <div class="f-col">
-        <h4>For Businesses</h4>
-        <a href="#">Apply — $100/mo</a>
-        <a href="#">Member Login</a>
-        <a href="#">Our Standards</a>
-        <a href="#">Contact Us</a>
+        <h4>For Business Owners</h4>
+        <a href="#apply">Check Eligibility</a>
+        <a href="#product-demo">See a Sample Listing</a>
+        <a href="/member-login">Member Login</a>
+        <a href="/standards">Our Standards</a>
+        <a href="/contact">Contact Us</a>
       </div>
     </div>
     <div class="footer-bar">
-      <p>© 2026 BestRatedKelowna.com · All rights reserved · Kelowna, BC</p>
-      <p>Rebrand concept · <span>Design Pixie palette</span></p>
+      <p>© 2026 BestRatedKelowna.com · Kelowna, BC, Canada · All rights reserved</p>
+      <p>Serving <span>Kelowna</span>, West Kelowna, Lake Country &amp; the Okanagan Valley</p>
     </div>
   </div>
 </footer>
 
-<div class="badge-float">✦ Rebrand Concept</div>
-
 <script>
+// ── SLIDESHOW ──
 (function(){
-  var track = document.getElementById('slidesTrack');
-  var nav   = document.getElementById('slidesNav');
-  var bar   = document.getElementById('progressBar');
+  var track   = document.getElementById('slidesTrack');
+  var nav     = document.getElementById('slidesNav');
+  var bar     = document.getElementById('progressBar');
+  var prevBtn = document.getElementById('prevSlide');
+  var nextBtn = document.getElementById('nextSlide');
   if(!track) return;
-
-  var slides = track.querySelectorAll('.slide');
-  var total  = slides.length;
+  var slides  = track.querySelectorAll('.slide');
+  var total   = slides.length;
   var current = 0;
-  var duration = 5000; // ms per slide
-  var timer, startTime, raf;
+  var duration= 6000;
+  var startTime, raf;
 
-  // Build dots
-  slides.forEach(function(_, i){
+  slides.forEach(function(_,i){
     var d = document.createElement('button');
-    d.className = 'dot' + (i===0?' active':'');
-    d.setAttribute('aria-label','Slide '+(i+1));
-    d.addEventListener('click', function(){ goTo(i, true); });
+    d.className = 'dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1)+' of '+total);
+    d.setAttribute('role','tab');
+    d.setAttribute('aria-selected',i===0?'true':'false');
+    d.addEventListener('click',function(){ goTo(i); });
     nav.appendChild(d);
   });
 
   function getDots(){ return nav.querySelectorAll('.dot'); }
 
-  function goTo(idx, manual){
-    clearTimeout(timer);
+  function goTo(idx){
     cancelAnimationFrame(raf);
     current = (idx + total) % total;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    getDots().forEach(function(d,i){ d.className = 'dot'+(i===current?' active':''); });
-    startProgress(manual ? duration : duration);
+    track.style.transform = 'translateX(-'+(current*100)+'%)';
+    getDots().forEach(function(d,i){
+      d.className = 'dot'+(i===current?' active':'');
+      d.setAttribute('aria-selected',i===current?'true':'false');
+    });
+    startProgress();
   }
 
-  function startProgress(dur){
-    bar.style.transition = 'none';
+  function startProgress(){
     bar.style.width = '0%';
     startTime = performance.now();
-    void bar.offsetWidth; // reflow
-
+    void bar.offsetWidth;
     function tick(now){
-      var elapsed = now - startTime;
-      var pct = Math.min(elapsed / dur * 100, 100);
-      bar.style.transition = 'none';
-      bar.style.width = pct + '%';
-      if(elapsed < dur){
-        raf = requestAnimationFrame(tick);
-      } else {
-        goTo(current + 1, false);
-      }
+      var e = now - startTime;
+      var p = Math.min(e/duration*100,100);
+      bar.style.width = p+'%';
+      if(e < duration){ raf = requestAnimationFrame(tick); }
+      else { goTo(current+1); }
     }
     raf = requestAnimationFrame(tick);
   }
 
-  goTo(0, false);
+  if(prevBtn) prevBtn.addEventListener('click',function(){ goTo(current-1); });
+  if(nextBtn) nextBtn.addEventListener('click',function(){ goTo(current+1); });
+
+  // Pause on hover
+  var pausedAt = 0;
+  track.addEventListener('mouseenter',function(){ cancelAnimationFrame(raf); pausedAt = performance.now(); });
+  track.addEventListener('mouseleave',function(){
+    var offset = pausedAt - startTime;
+    startTime = performance.now() - offset;
+    function tick(now){ var e=now-startTime,p=Math.min(e/duration*100,100); bar.style.width=p+'%'; if(e<duration){raf=requestAnimationFrame(tick);}else{goTo(current+1);} }
+    raf = requestAnimationFrame(tick);
+  });
+
+  // Keyboard
+  document.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft')goTo(current-1); if(e.key==='ArrowRight')goTo(current+1); });
+
+  goTo(0);
+})();
+
+// ── FAQ ACCORDION ──
+(function(){
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    if(!btn) return;
+    btn.addEventListener('click',function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        var q = i.querySelector('.faq-q');
+        if(q) q.setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
 })();
 </script>
+
+
+
 
 </body></html>
